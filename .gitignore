@@ -1,0 +1,10 @@
+# Proteus temporary files
+*.workspace
+
+# Proteus backups
+**/Project Backups/
+*.bak
+
+# Visual Studio Code settings
+.vscode/c_cpp_properties.json
+.specstory/
