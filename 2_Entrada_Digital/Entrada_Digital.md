@@ -91,10 +91,12 @@ por
 bool estadoActual;
 ```
 
-Y luego dentro del `void loop()` ponemos un condicional `if` para 
+Y luego dentro del `void loop()` ponemos un condicional `if` para poder detectar el botón
 ```cpp
+    // Recordemos cambiar el nombre del botón
+    estadoActual = digitalRead(pinBoton);
     // Recordemos que usa lógica negativa, así que dice que si el estado anterior del botón era apagado (HIGH) y el estado 
-    if (estadoAnterior == HIGH && estadoBoton == LOW) {
+    if (estadoAnterior == NO_PRESIONADO && estadoActual == PRESIONADO) {
         // usar ! en estadoLed sirve para intercambiar
         // entre HIGH y LOW 
         estadoLed = !estadoLed;
@@ -109,27 +111,6 @@ Y luego dentro del `void loop()` ponemos un condicional `if` para
 
 
 ### 2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.
-
-Ejemplo base para dos canales independientes:
-
-```cpp
-byte pinBoton1 = 2;
-byte pinLed1 = 3;
-byte pinBoton2 = 4;
-byte pinLed2 = 5;
-
-void setup() {
-  pinMode(pinBoton1, INPUT_PULLUP);
-  pinMode(pinLed1, OUTPUT);
-  pinMode(pinBoton2, INPUT_PULLUP);
-  pinMode(pinLed2, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(pinLed1, digitalRead(pinBoton1) == LOW ? HIGH : LOW);
-  digitalWrite(pinLed2, digitalRead(pinBoton2) == LOW ? HIGH : LOW);
-}
-```
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
