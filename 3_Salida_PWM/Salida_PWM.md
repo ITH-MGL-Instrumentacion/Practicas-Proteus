@@ -88,7 +88,8 @@ Puedes usar un arreglo con los valores equivalentes en 8 bits:
 #include <Arduino.h>
 
 byte pinLed = 3;
-byte nivelesPWM[] = {0, 64, 128, 191, 255};
+// Pon los valores
+byte nivelesPWM[] = {valor1, valor2, valor3, valor4, valor5};
 byte totalNiveles = 5;
 
 void setup() {
@@ -97,11 +98,14 @@ void setup() {
 
 void loop() {
     for (byte i = 0; i < totalNiveles; i++) {
+        // Recorre cada nivel de brillo del arreglo
         analogWrite(pinLed, nivelesPWM[i]);
-        delay(300);
+        delay(tiempo);
     }
 }
 ```
+
+Este `for` recorre todos los valores de `nivelesPWM` y aplica cada brillo por `200 ms`.
 
 Algoritmo sugerido:
 
@@ -113,7 +117,7 @@ INICIO
     loop:
         Para cada nivel del arreglo:
             Escribir PWM en LED
-            Esperar un tiempo fijo (ej. 300 ms)
+            Esperar un tiempo fijo (ej. 200 ms)
 FIN
 ```
 
