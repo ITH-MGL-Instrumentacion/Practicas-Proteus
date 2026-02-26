@@ -34,10 +34,60 @@ En esta práctica, el Arduino enciende y apaga un LED conectado al pin digital `
 
 Esto produce el parpadeo continuo del LED.
 
+```cpp
+byte ledPin = 3;
+int tiempoEncendido = 500;
+uint16_t tiempoApagado = 500;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(tiempoEncendido);
+
+  digitalWrite(ledPin, LOW);
+  delay(tiempoApagado);
+}
+```
+
 ## Ejercicios adicionales
 
-1. Cambia el tiempo de encendido y apagado para modificar la velocidad de parpadeo.
-2. Añade otro LED en el pin digital `5` y haz que parpadee con un patrón distinto al del pin `3`.
+### 1. Cambia el tiempo de encendido y apagado para modificar la velocidad de parpadeo.
+
+Puedes lograrlo cambiando los valores de tiempo:
+
+```cpp
+int tiempoEncendido = 200;
+uint16_t tiempoApagado = 800;
+```
+
+Con esto el LED estará menos tiempo encendido que apagado.
+
+### 2. Añade otro LED en el pin digital `5` y haz que parpadee con un patrón distinto al del pin `3`.
+
+Ejemplo base:
+
+```cpp
+byte ledPin1 = 3;
+byte ledPin2 = 5;
+
+void setup() {
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, LOW);
+  delay(300);
+
+  digitalWrite(ledPin1, LOW);
+  digitalWrite(ledPin2, HIGH);
+  delay(700);
+}
+```
 
 | Anterior | Índice | Siguiente |
 |---|---|---|

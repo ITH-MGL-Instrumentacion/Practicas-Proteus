@@ -6,7 +6,6 @@
 - [Instalación](#instalación)
   - [Paso 1: Descargar Arduino IDE](#paso-1-descargar-arduino-ide)
   - [Paso 2: Instalar](#paso-2-instalar)
-- [Proximos pasos](#proximos-pasos)
 
 ## ¿Qué es Arduino?
 
@@ -37,9 +36,6 @@ Características principales:
 
 ### Paso 2: Instalar
 - **Windows**: Ejecuta el instalador  y sigue el asistente.
-
-## Proximos pasos
-[Volver al índice](../README.md#temas-de-introducción) -> [Introducción a Proteus](Introduccion_Proteus.md)
 
 | Anterior | Índice | Siguiente |
 |---|---|---|

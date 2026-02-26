@@ -5,6 +5,8 @@
   - [Archivo de la práctica](#archivo-de-la-práctica)
   - [¿Qué hace el código?](#qué-hace-el-código)
 - [Ejercicios adicionales](#ejercicios-adicionales)
+  - [1. Haz que el LED se encienda al presionar el botón y se mantenga prendido. Luego que se apague al volver a presionarlo.](#1-haz-que-el-led-se-encienda-al-presionar-el-botón-y-se-mantenga-prendido-luego-que-se-apague-al-volver-a-presionarlo)
+  - [2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.](#2-añade-otro-botón-en-el-pin-digital-4-y-un-led-en-el-pin-digital-5)
 
 ## ¿Qué es una entrada digital?
 
@@ -34,10 +36,100 @@ En esta práctica se lee un botón en el pin `2` y se controla un LED en el pin 
 4. Si el botón está pulsado (`LOW` con pull-up), enciende el LED.
 5. Si no está pulsado, apaga el LED.
 
+```cpp
+#include <Arduino.h>
+
+byte pinBoton = 2;
+byte pinLed = 3;
+
+// La variable estadoBoton se declara como bool 
+// porque solo necesitamos saber si el botón 
+// está presionado o no.
+bool estadoBoton;
+
+// Para no confundirnos con los valores de HIGH y LOW,
+// definimos constantes para representar el estado del botón. 
+const bool PRESIONADO = LOW; // El botón está presionado cuando el pin está en LOW
+const bool NO_PRESIONADO = HIGH; // El botón no está presionado cuando el pin está en HIGH
+
+
+void setup() {
+	pinMode(pinBoton, INPUT_PULLUP);
+	pinMode(pinLed, OUTPUT);
+}
+
+void loop() {
+	estadoBoton = digitalRead(pinBoton);
+
+    // La lógica del botón es inversa porque se usa INPUT_PULLUP,
+    // el pin se mantiene en HIGH (5v) cuando el botón no está presionado
+	if (estadoBoton == PRESIONADO) {
+		digitalWrite(pinLed, HIGH);
+	} else {
+		digitalWrite(pinLed, LOW);
+	}
+}
+```
+
 ## Ejercicios adicionales
 
-1. Haz que el LED se encienda al presionar el botón y se mantenga prendido. Luego que se apague al volver a presionarlo.
-2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.
+### 1. Haz que el LED se encienda al presionar el botón y se mantenga prendido. Luego que se apague al volver a presionarlo.
+
+Para eso, podemos guardar una variable del estado actual del LED y del estado anterior. Para eso, inicializamos las variables arriba del `void setup()`:
+
+```cpp
+bool estadoAnterior = HIGH;
+```
+
+También puedes cambiar 
+```cpp
+bool estadoBoton;
+```
+por
+
+```cpp
+bool estadoActual;
+```
+
+Y luego dentro del `void loop()` ponemos un condicional `if` para 
+```cpp
+    // Recordemos que usa lógica negativa, así que dice que si el estado anterior del botón era apagado (HIGH) y el estado 
+    if (estadoAnterior == HIGH && estadoBoton == LOW) {
+        // usar ! en estadoLed sirve para intercambiar
+        // entre HIGH y LOW 
+        estadoLed = !estadoLed;
+        digitalWrite(pinLed, estadoLed);
+        delay(20);
+    }
+
+    estadoAnterior = estadoActual;
+}
+```
+
+
+
+### 2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.
+
+Ejemplo base para dos canales independientes:
+
+```cpp
+byte pinBoton1 = 2;
+byte pinLed1 = 3;
+byte pinBoton2 = 4;
+byte pinLed2 = 5;
+
+void setup() {
+  pinMode(pinBoton1, INPUT_PULLUP);
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinBoton2, INPUT_PULLUP);
+  pinMode(pinLed2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(pinLed1, digitalRead(pinBoton1) == LOW ? HIGH : LOW);
+  digitalWrite(pinLed2, digitalRead(pinBoton2) == LOW ? HIGH : LOW);
+}
+```
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
