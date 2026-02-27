@@ -1,5 +1,13 @@
 {
   "recommendations": [
+    "vsciot-vscode.vscode-arduino",
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools"
+  ],
+  "unwantedRecommendations": []
+}
+{
+  "recommendations": [
     "vscode-arduino.vscode-arduino-community",
     "ms-vscode.cpptools",
     "ms-vscode.cpptools-extension-pack",

@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Arduino: Build (UNO)",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": [
+        "compile",
+        "--fqbn",
+        "arduino:avr:uno",
+        "--build-path",
+        "${workspaceFolder}/.arduino_build",
+        "${workspaceFolder}/1_Salida_Digital/Salida_Digital.ino"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino: Upload (UNO)",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": [
+        "upload",
+        "-p",
+        "${input:serialPort}",
+        "--fqbn",
+        "arduino:avr:uno",
+        "--input-dir",
+        "${workspaceFolder}/.arduino_build",
+        "${workspaceFolder}/1_Salida_Digital/Salida_Digital.ino"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "serialPort",
+      "type": "promptString",
+      "description": "Puerto serie (ej. COM3)",
+      "default": ""
+    }
+  ]
+}

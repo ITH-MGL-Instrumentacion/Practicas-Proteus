@@ -1,5 +1,19 @@
 {
+  "files.associations": {
+    "*.ino": "cpp"
+  },
+  "C_Cpp.default.configurationProvider": "vsciot-vscode.vscode-arduino",
+  "arduino.path": "C:\\Program Files (x86)\\Arduino",
+  "arduino.board": "arduino:avr:uno",
+  "arduino.enableUSBDetection": true,
   "arduino.defaultBoard": "arduino:avr:uno",
   "C_Cpp.errorSquiggles": "enabled",
-  "C_Cpp.intelliSenseEngine": "default"
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.default.intelliSenseMode": "gcc-x86",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "${env:APPDATA}\\Arduino15\\packages\\**\\hardware\\**\\cores\\arduino",
+    "${env:PROGRAMFILES(X86)}\\Arduino\\hardware\\arduino\\avr\\cores\\arduino",
+    "${env:PROGRAMFILES}\\Arduino\\hardware\\arduino\\avr\\cores\\arduino"
+  ]
 }
