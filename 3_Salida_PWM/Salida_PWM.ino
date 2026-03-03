@@ -1,9 +1,8 @@
 #include <Arduino.h>
+#include <math.h>
 
 byte pinLed = 3;
-// Pon los valores
-byte nivelesPWM[] = {0, 64, 128, 191, 255};
-byte totalNiveles = 5;
+const float periodoMs = 1000.0;
 
 void setup() 
 {
@@ -12,9 +11,15 @@ void setup()
 
 void loop() 
 {
-    for (byte i = 0; i < totalNiveles; i++) {
-        // Recorre cada nivel de brillo del arreglo
-        analogWrite(pinLed, nivelesPWM[i]);
-        delay(1000);
-    }
+    unsigned long t = millis();
+
+    // Ángulo en radianes para un periodo de 1 segundo
+    float angulo = 2.0 * PI * (t % (unsigned long)periodoMs) / periodoMs;
+
+    // Escalar de [-1, 1] a [0, 255]
+    float senoNormalizado = (sin(angulo) + 1.0) * 0.5;
+    byte valorPWM = (byte)(senoNormalizado * 255.0);
+
+    analogWrite(pinLed, valorPWM);
+    delay(5);
 }
