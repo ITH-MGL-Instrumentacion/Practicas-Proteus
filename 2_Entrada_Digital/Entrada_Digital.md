@@ -90,12 +90,15 @@ por
 ```cpp
 bool estadoActual;
 ```
-
+Además de añadir una variable para el LED que comience en el estado LOW
+```cpp
+bool estadoLed = LOW
+```
 Y luego dentro del `void loop()` ponemos un condicional `if` para poder detectar el botón
 ```cpp
     // Recordemos cambiar el nombre del botón
     estadoActual = digitalRead(pinBoton);
-    // Recordemos que usa lógica negativa, así que dice que si el estado anterior del botón era apagado (HIGH) y el estado 
+    // El if es para
     if (estadoAnterior == NO_PRESIONADO && estadoActual == PRESIONADO) {
         // usar ! en estadoLed sirve para intercambiar
         // entre HIGH y LOW 
