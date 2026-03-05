@@ -35,19 +35,16 @@ void loop() {
     // 1) Leer la entrada analógica de A0.
     //    analogRead() devuelve un número entero de 10 bits (0..1023).
     lecturaCAD = analogRead(pinPot);
-
+    int cantidadEncendida = map(lecturaCAD, 0, 1023, 0, 10);
     // 2) Separar el valor leído en bits y mostrar cada bit en un LED.
     //    Recorremos los 10 bits del número (bit 0 a bit 9).
-    for (byte bit = 0; bit < 10; bit++) {
-        // Desplazamos el valor 'bit' posiciones a la derecha
-        // y enmascaramos con 1 para quedarnos solo con ese bit.
-        // Resultado posible: 0 o 1.
-        byte estadoBit = (lecturaCAD >> bit) & 0x01;
-
-        // Si estadoBit es 1, el LED se enciende.
-        // Si estadoBit es 0, el LED se apaga.
-        digitalWrite(ledPins[bit], estadoBit);
+    for (int i = 0; i < 10; i++) {
+    if (i < cantidadEncendida) {
+        digitalWrite(ledPins[i], HIGH);  // Encender
+    } else {
+        digitalWrite(ledPins[i], LOW);   // Apagar
     }
+}
 
     // Pequeño retardo para estabilidad visual.
     delay(5);
