@@ -134,7 +134,7 @@ byte pinLed = 3;
 const float periodoMs = 1000.0;
 
 void setup() {
-    pinMode(pinLed, OUTPUT);
+    pinMode(3, OUTPUT);
 }
 
 void loop() {
@@ -147,7 +147,7 @@ void loop() {
     float senoNormalizado = (sin(angulo) + 1.0) * 0.5;
     byte valorPWM = (byte)(senoNormalizado * 255.0);
 
-    analogWrite(pinLed, valorPWM);
+    analogWrite(3, valorPWM);
     delay(5);
 }
 ```
