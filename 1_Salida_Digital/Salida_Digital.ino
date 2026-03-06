@@ -3,9 +3,9 @@
 // byte usa 8 bits (0 a 255)
 byte ledPin = 3;
 // int usa 16 bits (-32,768 a 32,767)
-int tiempoEncendido = 500;  //milisegundos
+int tiempoEncendido = 200;  //milisegundos
 // uint16_t (unsigned int) usa 16 bits (0 a 65,535)
-uint16_t tiempoApagado = 500;    //milisegundos
+uint16_t tiempoApagado = 800;    //milisegundos
 // pueden usarse otros tipos de datos dependiendo 
 // de las necesidades del programa, como:
 // long, float, double, etc.

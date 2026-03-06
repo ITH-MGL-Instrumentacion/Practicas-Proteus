@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "1_Salida_Digital/Salida_Digital.ino",
+    "port": "",
+    "output": "build"
+}
