@@ -6,7 +6,9 @@ byte pinLed = 3;
 // La variable estadoBoton se declara como bool 
 // porque solo necesitamos saber si el botón 
 // está presionado o no.
-bool estadoBoton;
+bool estadoActual;
+bool estadoLed = LOW;
+bool estadoAnterior = HIGH;
 
 // Para no confundirnos con los valores de HIGH y LOW,
 // definimos constantes para representar el estado del botón. 
@@ -20,13 +22,18 @@ void setup() {
 }
 
 void loop() {
-	estadoBoton = digitalRead(pinBoton);
+	
+	 // Recordemos cambiar el nombre del botón
+    estadoActual = digitalRead(pinBoton);
+    // El if es para
+    if (estadoAnterior == NO_PRESIONADO && estadoActual == PRESIONADO) {
+        // usar ! en estadoLed sirve para intercambiar
+        // entre HIGH y LOW 
+        estadoLed = !estadoLed;
+        digitalWrite(pinLed, estadoLed);
+        delay(20);
+    }
 
-    // La lógica del botón es inversa porque se usa INPUT_PULLUP,
-    // el pin se mantiene en HIGH (5v) cuando el botón no está presionado
-	if (estadoBoton == PRESIONADO) {
-		digitalWrite(pinLed, HIGH);
-	} else {
-		digitalWrite(pinLed, LOW);
-	}
+    estadoAnterior = estadoActual;
+
 }
