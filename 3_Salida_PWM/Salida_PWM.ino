@@ -6,9 +6,9 @@ byte pinLed = 3;
 byte valorPWM = 128;
 
 void setup() {
-	pinMode(pinLed, OUTPUT);
+	pinMode(3, OUTPUT);
 }
 
 void loop() {
-	analogWrite(pinLed, valorPWM);
+	analogWrite(3, 128);
 }

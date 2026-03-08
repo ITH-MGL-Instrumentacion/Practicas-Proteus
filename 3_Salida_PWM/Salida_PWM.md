@@ -89,18 +89,18 @@ Puedes usar un arreglo con los valores equivalentes en 8 bits:
 
 byte pinLed = 3;
 // Pon los valores
-byte nivelesPWM[] = {valor1, valor2, valor3, valor4, valor5};
+byte nivelesPWM[] = {0, 64, 128, 191, 255};
 byte totalNiveles = 5;
-
+int tiempo = 200;
 void setup() {
-    pinMode(pinLed, OUTPUT);
+    pinMode(3, OUTPUT);
 }
 
 void loop() {
     for (byte i = 0; i < totalNiveles; i++) {
         // Recorre cada nivel de brillo del arreglo
-        analogWrite(pinLed, nivelesPWM[i]);
-        delay(tiempo);
+        analogWrite(3, nivelesPWM[i]);
+        delay(200);
     }
 }
 ```
@@ -134,7 +134,7 @@ byte pinLed = 3;
 const float periodoMs = 1000.0;
 
 void setup() {
-    pinMode(pinLed, OUTPUT);
+    pinMode(3, OUTPUT);
 }
 
 void loop() {
@@ -147,7 +147,7 @@ void loop() {
     float senoNormalizado = (sin(angulo) + 1.0) * 0.5;
     byte valorPWM = (byte)(senoNormalizado * 255.0);
 
-    analogWrite(pinLed, valorPWM);
+    analogWrite(3, valorPWM);
     delay(5);
 }
 ```
