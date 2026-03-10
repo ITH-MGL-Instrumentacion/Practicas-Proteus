@@ -2,18 +2,18 @@
 
 - [Objetivo](#objetivo)
 - [Práctica base: conversión A/D directa de 10 bits](#práctica-base-conversión-ad-directa-de-10-bits)
-  - [Archivo de la práctica base](#archivo-de-la-práctica-base)
-  - [Conexión sugerida](#conexión-sugerida)
-  - [Algoritmo](#algoritmo)
-  - [Funciones necesarias](#funciones-necesarias)
-  - [¿Cómo leer bit por bit?](#cómo-leer-bit-por-bit)
+	- [Archivo de la práctica base](#archivo-de-la-práctica-base)
+	- [Conexión sugerida](#conexión-sugerida)
+	- [Algoritmo](#algoritmo)
+	- [Funciones necesarias](#funciones-necesarias)
+	- [¿Cómo leer bit por bit?](#cómo-leer-bit-por-bit)
 - [Práctica adicional 1: barra creciente/decreciente con 10 LEDs](#práctica-adicional-1-barra-crecientedecreciente-con-10-leds)
-  - [Algoritmo](#algoritmo-1)
-  - [Funciones necesarias](#funciones-necesarias-1)
-  - [¿Cómo funciona `map()`?](#cómo-funciona-map)
+	- [Algoritmo](#algoritmo-1)
+	- [Funciones necesarias](#funciones-necesarias-1)
+	- [¿Cómo funciona `map()`?](#cómo-funciona-map)
 - [Práctica adicional 2: potenciómetro controlando PWM en D3](#práctica-adicional-2-potenciómetro-controlando-pwm-en-d3)
-  - [Algoritmo](#algoritmo-2)
-  - [Funciones necesarias](#funciones-necesarias-2)
+	- [Algoritmo](#algoritmo-2)
+	- [Funciones necesarias](#funciones-necesarias-2)
 
 ## Objetivo
 
@@ -172,4 +172,4 @@ FIN
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Salida "analógica" (PWM)](../3_Salida_PWM/Salida_PWM.md) | [Volver al índice](../README.md#prácticas-básicas) | [Amplificadores operacionales básicos](../5_OpAmps_Basicos/OpAmps_Basicos.md) |
+| [Salida "analógica" (PWM)](../3_Salida_PWM/Salida_PWM.md) | [Volver al índice](../README.md) | [Amplificadores operacionales básicos](../5_OpAmps_Basicos/OpAmps_Basicos.md) |

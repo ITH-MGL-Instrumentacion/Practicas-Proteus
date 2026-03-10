@@ -50,4 +50,4 @@ y finalmente, ejecuta la simulación con el botón de abajo a la izquierda.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Introducción a Arduino](Introduccion_Arduino.md) | [Volver al índice](../README.md#temas-de-introducción) | [Formato de los proyectos en Visual Studio Code](Formato_proyectos.md) |
+| [Introducción a Arduino](Introduccion_Arduino.md) | [Volver al índice](../README.md) | [Formato de los proyectos en Visual Studio Code](Formato_proyectos.md) |
