@@ -1,12 +1,4 @@
 {
-    // path to the main sketch relative to the workspace root
-    "sketch": "2_Entrada_Digital/Entrada_Digital.ino",
-    // board identifier for Arduino UNO (use Community Edition naming)
     "board": "arduino:avr:uno",
-    // optional build configuration or custom settings can go here
-    // "configuration": "cpu=atmega328old",
-    // port is left blank so the extension will prompt when uploading
-    // "port": "COM3",
-    // output folder for build artifacts
-    "output": "build"
+    "port": ""
 }

@@ -29,6 +29,10 @@ void setup() {
 	pinMode(pinLed1, OUTPUT);
 	pinMode(pinBoton2, INPUT_PULLUP);
 	pinMode(pinLed2, OUTPUT);
+	pinMode(pinBoton1, INPUT_PULLUP);
+	pinMode(pinLed1, OUTPUT);
+	pinMode(pinBoton2, INPUT_PULLUP);
+	pinMode(pinLed2, OUTPUT);
 }
 
 void loop() {
