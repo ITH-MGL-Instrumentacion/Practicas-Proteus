@@ -117,4 +117,4 @@ Y luego dentro del `void loop()` ponemos un condicional `if` para poder detectar
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Salida digital](../1_Salida_Digital/Salida_Digital.md) | [Volver al índice](../README.md#prácticas-básicas) | [Salida "analógica" (PWM)](../3_Salida_PWM/Salida_PWM.md) |
+| [Salida digital](../1_Salida_Digital/Salida_Digital.md) | [Volver al índice](../README.md) | [Salida "analógica" (PWM)](../3_Salida_PWM/Salida_PWM.md) |
