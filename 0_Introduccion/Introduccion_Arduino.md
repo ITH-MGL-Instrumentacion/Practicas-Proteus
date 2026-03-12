@@ -39,4 +39,4 @@ Características principales:
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-|  | [Volver al índice](../README.md#temas-de-introducción) | [Introducción a Proteus](Introduccion_Proteus.md) |
+|  | [Volver al índice](../README.md) | [Introducción a Proteus](Introduccion_Proteus.md) |
