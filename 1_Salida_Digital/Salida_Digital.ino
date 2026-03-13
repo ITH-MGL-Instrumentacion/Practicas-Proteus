@@ -1,27 +1,29 @@
-#include <Arduino.h>
+int ledPin1 = 3;   
+int ledPin2 = 5;   
 
-// byte usa 8 bits (0 a 255)
-byte ledPin = 3;
-// int usa 16 bits (-32,768 a 32,767)
-int tiempoEncendido = 500;  //milisegundos
-// uint16_t (unsigned int) usa 16 bits (0 a 65,535)
-uint16_t tiempoApagado = 500;    //milisegundos
-// pueden usarse otros tipos de datos dependiendo 
-// de las necesidades del programa, como:
-// long, float, double, etc.
+int onTime1 = 200;  
+int offTime1 = 800;  
+
+int onTime2 = 300;   
+int offTime2 = 700;  
 
 void setup() {
-    pinMode(ledPin, OUTPUT);
+    pinMode(ledPin1, OUTPUT);
+    pinMode(ledPin2, OUTPUT);
 }
 
 void loop() {
-    // HIGH es el valor lógico 1/true o 5v,
-    // LOW es 0/false o 0v
-    digitalWrite(ledPin, HIGH);
-    // delay() recibe un valor en milisegundos
-    // el programa se detiene por el tiempo indicado
-    delay(tiempoEncendido);
+    // LED1 encendido, LED2 apagado
+    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledPin2, LOW);
+    delay(onTime1);
 
-    digitalWrite(ledPin, LOW);
-    delay(tiempoApagado);
+    // LED1 apagado, LED2 encendido
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, HIGH);
+    delay(onTime2);
+
+    // LED2 apagado (para completar su ciclo)
+    digitalWrite(ledPin2, LOW);
+    delay(offTime2);
 }
