@@ -1,32 +1,47 @@
 #include <Arduino.h>
 
-byte pinBoton = 2;
-byte pinLed = 3;
+byte pinBoton1 = 2;
+byte pinLed1   = 3;
 
-// La variable estadoBoton se declara como bool 
-// porque solo necesitamos saber si el botón 
-// está presionado o no.
-bool estadoBoton;
+byte pinBoton2 = 4;
+byte pinLed2   = 5;
 
-// Para no confundirnos con los valores de HIGH y LOW,
-// definimos constantes para representar el estado del botón. 
-const bool PRESIONADO = LOW; // El botón está presionado cuando el pin está en LOW
-const bool NO_PRESIONADO = HIGH; // El botón no está presionado cuando el pin está en HIGH
+bool estadoAnterior1 = HIGH;
+bool estadoActual1;
+bool estadoLed1 = LOW;
 
+bool estadoAnterior2 = HIGH;
+bool estadoActual2;
+bool estadoLed2 = LOW;
+
+const bool PRESIONADO = LOW;
+const bool NO_PRESIONADO = HIGH;
 
 void setup() {
-	pinMode(pinBoton, INPUT_PULLUP);
-	pinMode(pinLed, OUTPUT);
+  pinMode(pinBoton1, INPUT_PULLUP);
+  pinMode(pinLed1, OUTPUT);
+
+  pinMode(pinBoton2, INPUT_PULLUP);
+  pinMode(pinLed2, OUTPUT);
 }
 
 void loop() {
-	estadoBoton = digitalRead(pinBoton);
+ 
+  estadoActual1 = digitalRead(pinBoton1);
+  if (estadoAnterior1 == NO_PRESIONADO && estadoActual1 == PRESIONADO) {
+    estadoLed1 = !estadoLed1;             
+    digitalWrite(pinLed1, estadoLed1);
+    delay(20);                            
+  }
+  estadoAnterior1 = estadoActual1;
 
-    // La lógica del botón es inversa porque se usa INPUT_PULLUP,
-    // el pin se mantiene en HIGH (5v) cuando el botón no está presionado
-	if (estadoBoton == PRESIONADO) {
-		digitalWrite(pinLed, HIGH);
-	} else {
-		digitalWrite(pinLed, LOW);
-	}
+
+  estadoActual2 = digitalRead(pinBoton2);
+  if (estadoAnterior2 == NO_PRESIONADO && estadoActual2 == PRESIONADO) {
+    estadoLed2 = !estadoLed2;             
+    digitalWrite(pinLed2, estadoLed2);
+    delay(20);                             // Anti-rebote
+  }
+  estadoAnterior2 = estadoActual2;
 }
+
