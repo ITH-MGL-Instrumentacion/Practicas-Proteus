@@ -13,10 +13,8 @@ void loop()
 {
     unsigned long t = millis();
 
-    // Ángulo en radianes para un periodo de 1 segundo
     float angulo = 2.0 * PI * (t % (unsigned long)periodoMs) / periodoMs;
 
-    // Escalar de [-1, 1] a [0, 255]
     float senoNormalizado = (sin(angulo) + 1.0) * 0.5;
     byte valorPWM = (byte)(senoNormalizado * 255.0);
 
