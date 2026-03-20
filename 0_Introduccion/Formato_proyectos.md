@@ -69,4 +69,4 @@ Si te aparecen errores de IntelliSense en archivos `.ino`, pídele a la IA de VS
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Introducción a Proteus](Introduccion_Proteus.md) | [Volver al índice](../README.md#temas-de-introducción) | [Salida digital](../1_Salida_Digital/Salida_Digital.md) |
+| [Introducción a Proteus](Introduccion_Proteus.md) | [Volver al índice](../README.md) | [Salida digital](../1_Salida_Digital/Salida_Digital.md) |
