@@ -28,9 +28,11 @@ Esta sección es más técnica que las anteriores, ya que tiene como objetivo en
     - [Ejercicio](#ejercicio-1)
   - [4. Filtros (Derivador e integrador)](#4-filtros-derivador-e-integrador)
     - [4.1. Integrador (filtro pasa bajas)](#41-integrador-filtro-pasa-bajas)
+    - [4.1. Ejercicios](#41-ejercicios)
     - [4.2. Derivador (filtro pasa altas)](#42-derivador-filtro-pasa-altas)
-    - [Derivador-Integrador (Filtro pasa banda)](#derivador-integrador-filtro-pasa-banda)
-    - [Integrador-Derivador (Filtro rechaza banda)](#integrador-derivador-filtro-rechaza-banda)
+    - [4.2. Ejercicios](#42-ejercicios)
+    - [4.3. Derivador-Integrador (Filtro pasa banda)](#43-derivador-integrador-filtro-pasa-banda)
+    - [4.3. Ejercicios](#43-ejercicios)
 
 
 ## Archivos
@@ -265,7 +267,7 @@ Realiza la operación matemática de integración. Es decir, el voltaje de salid
 En este caso, el voltaje resultante se obtiene con la ecuación:
 
 $$
-V_{out}(t) = -\frac{R}{L} \int V_{in}(t)dt + k
+V_{out}(t) = -\frac{R_F}{L} \int V_{in}(t)dt + k
 $$
 
 Donde $k$ representa la condición inicial del voltaje almacenado en forma de campo magnético.
@@ -277,12 +279,12 @@ El inconveniente de las bobinas es que es difícil miniaturizarlas para ponerlas
 Cuya ecuación es:
 
 $$
-V_{\text{out}}(t) = -\frac{1}{RC}\int V_{in}(t)dt + k
+V_{\text{out}}(t) = -\frac{1}{R_{in}C}\int V_{in}(t)dt + k
 $$
 
 Donde $k$ representa la carga inicial del condensador. 
 
-El problema en este caso es que mientras más baja la frecuencia de cambio del voltaje (lo cual se nota aún más en corriente directa), más amplifica hasta el punto de que el condensador se satura y ya no integra. Esto no se puede solucionar, pero se puede usar una resistencia para limitar la ganancia en CC del integrador usando la configuración del [amplificador inversor](#21-amplificador-inversor).
+El problema en este caso es que mientras más baja la frecuencia de cambio del voltaje (lo cual se nota aún más en corriente directa), más amplifica hasta el punto de que el condensador se satura y ya no integra. Esto no se puede solucionar, pero se puede usar una resistencia para limitar la ganancia en corriente continua (CC) del integrador usando la configuración del [amplificador inversor](#21-amplificador-inversor).
 
 El nuevo circuito queda de la siguiente manera:
 
@@ -306,15 +308,59 @@ $$
 V_{\text{out}}(t) = - \frac{R_F}{R}V_{\text{CC}}
 $$
 
-**Qué conectar**
-- Configuración inversora con condensador en realimentación.
+Las ecuaciones de diseño del integrador dependen del tipo de entrada.
 
-**Qué observar**
-- Con onda cuadrada de entrada, la salida tiende a forma triangular.
-- La frecuencia afecta qué tan rápido cambia la salida.
+Señal senoidal:
 
-**Prueba sugerida**
-- Mantén amplitud y cambia frecuencia para ver la diferencia.
+$$R_{in} = \frac{1}{2\pi GfC}$$
+$$R_F = 4\pi GR_{in}$$
+
+Señal cuadrada:
+
+$$R_{in} = \frac{1}{4GfC}$$
+$$R_F = 8GR_{in}$$
+
+Señal triangular:
+
+$$R_{in} = \frac{1}{8GfC}$$
+$$R_F = 16GR_{in}$$
+
+Además, $R_+$ está dado por:
+$$R_+ = R_F||R_{in}$$
+
+Tenga en cuenta:
+- $R+$ es una resistencia que se coloca para balancear el circuito (eliminar corriente de bias).
+- La función de $R_F$ es limitar la ganancia de la componente CC de la señal de entrada.
+- $G$ es la ganancia de la componente CA de la señal de entrada.
+- El valor del condensador $C$ es libre.
+
+Ahora, para el diseño del **filtro pasa bajas**, la función de transferencia es
+
+$$\frac{V_{out}}{V_{in}}(s) = -\left(\frac{R_F}{R_{in}}\right)\left(\frac{\frac{1}{CR_F}}{s+\frac{1}{CR_F}}\right)$$
+
+
+Y las ecuaciones de diseño son:
+
+$$R_F = \frac{1}{2\pi f_c C}$$
+$$R_{in} = \frac{R_F}{G}$$
+$$R_+ = R_{in}||R_F$$
+
+Tenga en cuenta:
+- $G$ es la ganancia de este filtro.
+- $f_c$ es la frecuencia de corte.
+- El valor de $C$ es libre.
+- La salida es inversa respecto a la entrada, signo menos en la función de transferencia.
+- La función de $R_+$ es la de balancear el circuito, aunque se puede obviar, y reemplazar por un corto circuito.
+
+En la página de [Wileba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-bajos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
+
+#### 4.1. Ejercicios
+
+- Verificar en el osciloscopio cómo se integra la señal senoidal con frecuencia de 980 Hz con ganancia -1 (inversor).
+- Calcular los valores de resistencia para integrar la señal cuadrada con la misma frecuencia y ganancia.
+- Calcular un filtro pasa bajas con una frecuencia de corte de 980 Hz y una ganancia de 10 con el mismo condensador. Luego simular.
+
+![Simular frecuencia](img/Simular_frecuencia.png)
 
 #### 4.2. Derivador (filtro pasa altas)
 
@@ -331,6 +377,7 @@ $$
 Y dependiendo de la señal que de entrada, puede responder de la siguiente forma:
 
 [![Imagen de entrada-salida del diferenciador](img/Entrada_salida_diferenciador.png)](img/Entrada_salida_diferenciador.png)
+(Obtenido de [Electronics Tutorials](https://www.electronics-tutorials.ws/opamp/opamp_6.html))
 
 También se le llama **filtro pasa altas** porque si denotamos la derivada del voltaje como la velocidad del cambio del voltaje, si el voltaje de entrada cambia a baja velocidad, por ejemplo, voltaje constante o frecuencia de cambio baja, el voltaje de salida es $0$ o un valor atenuado respectivamente, mientras que si la velocidad o frecuencia de cambio es muy alta, no solo la deja pasar, sino que la amplifica. Por eso se dice que deja pasar las altas frecuencias (pasa altas) y atenúa las bajas.
 
@@ -355,25 +402,72 @@ $$
 \end{align*}
 $$
 
+Las ecuaciones de diseño del derivador también dependen del tipo de entrada.
+
+Señal senoidal:
+
+$$R_{F} = R_+ = \frac{G}{2\pi fC}$$
+$$R_{in} = \frac{R_F}{4\pi G}$$
+
+Señal cuadrada:
+
+$$R_{F} =  R_+ = \frac{G}{4fC}$$
+$$R_{in} = \frac{R_{F}}{20G}$$
+
+Señal triangular:
+
+$$R_{F} =  R_+ = \frac{G}{8fC}$$
+$$R_{in} = \frac{R_F}{10A}$$
+
+Además, se debe tomar en cuenta que:
+- R+ es una resistencia cuya función es la de balancear el circuito (eliminar corriente de bias).
+- G es la ganancia de la señal de entrada $V_{in}$.
+- La función de $R_{in}$ es limitar la ganancia de cualquier señal de ruido de alta frecuencia.
+- El valor de C es libre.
+- Una señal de ruido en telecomunicaciones es una señal de muy baja amplitud normalmente por el orden de microvoltios (uV), y de una frecuencia muy elevada por el orden de cientos de Mega Hertz (MHz) o mas.
+
+En la siguiente imagen se puede ver cómo se ve la frecuencia de corte justo entre la banda de parada y la banda de paso. Luego hay un límite de ganancia en el punto de intersección, ya que el OpAmp físicamente no puede aumentar la ganancia en frecuencias tan altas.
 
 [![Ganancia Filtro Pasa altas](img/Ganancia_Filtro_Pasa_altas.png)](img/Ganancia_Filtro_Pasa_altas.png)
 
 (Obtenido de [Electronics Tutorials](https://www.electronics-tutorials.ws/filter/filter_6.html))
 
-**Qué conectar**
-- Configuración inversora con condensador en la entrada.
 
-**Qué observar**
-- Resalta cambios rápidos de la señal.
-- Con onda triangular, la salida se parece más a una cuadrada.
+Ahora, para el diseño del **filtro pasa altas**, la función de transferencia es
 
-**Prueba sugerida**
-- Compara su comportamiento con el integrador para la misma entrada.
+$$\frac{V_{out}}{V_{in}}(s) = -\left(\frac{R_F}{R_{in}}\right)\left(\frac{s}{s+\frac{1}{CR_{in}}}\right)$$
 
-#### Derivador-Integrador (Filtro pasa banda)
 
-#### Integrador-Derivador (Filtro rechaza banda)
+Y las ecuaciones de diseño son:
 
+$$R_{in} = \frac{1}{2\pi f_c C}$$
+$$R_F = R_+ = AR$$
+
+Tenga en cuenta:
+- “A” es la ganancia del filtro.
+- $f_c$ es la frecuencia de corte.
+- El valor de $C$ es libre.
+- La salida es inversa respecto a la entrada, signo menos en la función de transferencia.
+- La función de $R_+$ es la de balancear el circuito, aunque se puede obviar, y reemplazar por un corto circuito.
+
+En la página de [Wileba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-altos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
+
+#### 4.2. Ejercicios
+
+- Verificar en el osciloscopio cómo se integra la señal senoidal con frecuencia de 490 Hz con ganancia -1 (inversor).
+- Calcular los valores de resistencia para integrar la señal cuadrada con la misma frecuencia y ganancia.
+- Calcular un filtro pasa bajas con una frecuencia de corte de 490 Hz y una ganancia de 10 con el mismo condensador. Luego simular.
+
+![Simular frecuencia](img/Simular_frecuencia.png)
+
+#### 4.3. Derivador-Integrador (Filtro pasa banda)
+
+Como su nombre lo indica, combina las características de ambos filtros, lo que permite dejar pasar solo frecuencias que se encuentran entre las frecuencias de corte elegidas. Hay un circuito que se puede hacer usando un solo amplificador operacional, pero también se pueden combinar los dos.
+
+![Filtro_pasa_banda](img\Ganancia_Filtro_Pasa_banda.png)
+
+#### 4.3. Ejercicios
+- Combina los dos filtros y verifica que deja pasar las frecuencias entre 490 y 980 Hz.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
