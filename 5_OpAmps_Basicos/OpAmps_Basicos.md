@@ -352,7 +352,7 @@ Tenga en cuenta:
 - La salida es inversa respecto a la entrada, signo menos en la función de transferencia.
 - La función de $R_+$ es la de balancear el circuito, aunque se puede obviar, y reemplazar por un corto circuito.
 
-En la página de [Wileba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-bajos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
+En la página de [Wilaeba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-bajos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
 
 #### 4.1. Ejercicios
 
@@ -424,7 +424,7 @@ Además, se debe tomar en cuenta que:
 - G es la ganancia de la señal de entrada $V_{in}$.
 - La función de $R_{in}$ es limitar la ganancia de cualquier señal de ruido de alta frecuencia.
 - El valor de C es libre.
-- Una señal de ruido en telecomunicaciones es una señal de muy baja amplitud normalmente por el orden de microvoltios (uV), y de una frecuencia muy elevada por el orden de cientos de Mega Hertz (MHz) o mas.
+- Una señal de ruido en telecomunicaciones es una señal de muy baja amplitud normalmente por el orden de microvoltios ($\mu$V), y de una frecuencia muy elevada por el orden de cientos de Mega Hertz (MHz) o más.
 
 En la siguiente imagen se puede ver cómo se ve la frecuencia de corte justo entre la banda de parada y la banda de paso. Luego hay un límite de ganancia en el punto de intersección, ya que el OpAmp físicamente no puede aumentar la ganancia en frecuencias tan altas.
 
@@ -450,7 +450,7 @@ Tenga en cuenta:
 - La salida es inversa respecto a la entrada, signo menos en la función de transferencia.
 - La función de $R_+$ es la de balancear el circuito, aunque se puede obviar, y reemplazar por un corto circuito.
 
-En la página de [Wileba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-altos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
+En la página de [Wilaeba Electrónica](https://wilaebaelectronica.blogspot.com/2017/01/filtro-pasa-altos-activo-de-1er-orden-rc.html) se puede ver una calculadora para la ganancia y frecuencia de corte.
 
 #### 4.2. Ejercicios
 
@@ -464,7 +464,7 @@ En la página de [Wileba Electrónica](https://wilaebaelectronica.blogspot.com/2
 
 Como su nombre lo indica, combina las características de ambos filtros, lo que permite dejar pasar solo frecuencias que se encuentran entre las frecuencias de corte elegidas. Hay un circuito que se puede hacer usando un solo amplificador operacional, pero también se pueden combinar los dos.
 
-![Filtro_pasa_banda](img\Ganancia_Filtro_Pasa_banda.png)
+![Filtro pasa banda](img\Ganancia_Filtro_Pasa_banda.png)
 
 #### 4.3. Ejercicios
 - Combina los dos filtros y verifica que deja pasar las frecuencias entre 490 y 980 Hz.
