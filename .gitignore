@@ -8,3 +8,7 @@
 # Visual Studio Code settings
 .vscode/c_cpp_properties.json
 .specstory/
+
+**/__pycache__/
+.venv/
+.vscode/
