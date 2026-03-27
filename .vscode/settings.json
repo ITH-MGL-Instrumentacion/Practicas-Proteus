@@ -1,5 +1,0 @@
-{
-  "arduino.defaultBoard": "arduino:avr:uno",
-  "C_Cpp.errorSquiggles": "disabled",
-  "C_Cpp.intelliSenseEngine": "default"
-}
