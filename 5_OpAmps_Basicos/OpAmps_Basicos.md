@@ -358,7 +358,11 @@ En la página de [Wilaeba Electrónica](https://wilaebaelectronica.blogspot.com/
 
 - Verificar en el osciloscopio cómo se integra la señal senoidal con frecuencia de 980 Hz con ganancia -1 (inversor).
 - Calcular los valores de resistencia para integrar la señal cuadrada con la misma frecuencia y ganancia.
-- Calcular un filtro pasa bajas con una frecuencia de corte de 980 Hz y una ganancia de 10 con el mismo condensador. Luego simular.
+- Calcular un filtro pasa bajas con una frecuencia de corte de 980 Hz y una ganancia de 10 con el mismo condensador. Para simular, dar doble clic en la imagen y poner como límite 10 kHz para que se aprecie mejor la gráfica. 
+
+![Editar gráfico de frecuencia](img/Simular_frecuencia_2.png)
+
+Luego clic derecho y simular
 
 ![Simular frecuencia](img/Simular_frecuencia.png)
 
