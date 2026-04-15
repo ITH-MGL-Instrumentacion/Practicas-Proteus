@@ -16,4 +16,4 @@ delay (300);
 digitalWrite(ledPin1, LOW);
 digitalWrite(ledPin2, HIGH);
 delay (700);
-}
+} 
