@@ -21,7 +21,7 @@ Leer una señal analógica desde `A0` y transformarla en salidas digitales o PWM
 
 ## Práctica base: conversión A/D directa de 10 bits
 
-Usa 10 LEDs en los pines `4` a `13` para mostrar directamente el resultado de la lectura analógica en formato binario de 10 bits (sin reducir a 8 bits).
+Usa 10 LED en los pines `4` a `13` para mostrar directamente el resultado de la lectura analógica en formato binario de 10 bits (sin reducir a 8 bits).
 
 ### Archivo de la práctica base
 
@@ -60,10 +60,10 @@ FIN
 
 La idea es que cada LED representa una posición binaria del número leído:
 
-- LED 0  → bit 0 (menos significativo)
-- LED 1  → bit 1
+- LED 0 → bit 0 (menos significativo)
+- LED 1 → bit 1
 - ...
-- LED 9  → bit 9 (más significativo)
+- LED 9 → bit 9 (más significativo)
 
 En el ciclo `for`, se hace esto para cada posición:
 
