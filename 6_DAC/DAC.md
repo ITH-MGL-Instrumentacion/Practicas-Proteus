@@ -79,9 +79,39 @@ $$\text{Resolución} = \frac{A\times V_{\text{ref}}}{2^n-1}$$
 
 ![](img/3_DAC_R_2R.SVG)
 
+El DAC R-2R también suma los bits de la salida del Arduino y los convierte a una salida analógica, pero en vez de usar muchas resistencias con valores muy distintos, solo utiliza dos valores: $R$ y $2R$. Por eso es una opción mucho más práctica para montarlo físicamente, ya que es más fácil conseguir varias resistencias iguales que una serie completa como en el DAC por suma ponderada.
+
+La red en escalera hace que cada bit aporte la mitad del peso del bit anterior. Así, el bit más significativo es el que más modifica la salida y el bit menos significativo es el que menos influye. Si un bit vale 1, su rama se conecta a $V_{\text{ref}}$; si vale 0, se conecta a tierra.
+
+Una forma de verlo es que el circuito divide sucesivamente el voltaje y la corriente dentro de la escalera, de modo que los pesos quedan en potencias de 2. Gracias a eso, para un convertidor de $n$ bits, la salida cambia en $2^n$ niveles posibles.
+
+Su principal ventaja respecto al DAC por suma ponderada es que conserva la lógica binaria de pesos $\frac{1}{2}$, $\frac{1}{4}$, $\frac{1}{8}$, $\frac{1}{16}$, etc., pero usando solo dos valores de resistencia. Eso reduce errores por tolerancia y hace mucho más sencillo armar el circuito en Protoboard.
+
+La resistencia de realimentación $R_F$ se calcula con la ecuación:
+
 $$R_F = \frac{A \times R}{1 - \frac{1}{2^n}}$$
 
+Donde:
+
+- $A$ es la ganancia deseada.
+- $R$ es el valor base de la red R-2R.
+- $n$ es el número de bits.
+
+Y el valor de la resistencia $R_X$ está dado por:
+
 $$R_X = \frac{R \times R_F}{R - R_F}$$
+
+Al igual que en el caso anterior, si $R_X$ resulta positiva, se conecta del pin no inversor a tierra; si resulta negativa, se conecta del pin inversor a tierra; y si el resultado es infinito, entonces no se coloca.
+
+El valor de $V_{\text{ref}}$ no cambia la estructura del DAC, solo el rango de voltaje de salida. Si se usa Arduino UNO, normalmente $V_{\text{ref}} = 5\text{ V}$, por lo que el valor máximo ideal de salida será aproximadamente:
+
+$$V_{\text{salida,max}} = A \times V_{\text{ref}}$$
+
+Y la resolución del convertidor será:
+
+$$\text{Resolución} = \frac{A\times V_{\text{ref}}}{2^n-1}$$
+
+En otras palabras, cada vez que el número digital de entrada aumenta en 1, el voltaje de salida aumenta un escalón. Mientras más bits tenga el DAC, más pequeños serán esos escalones y más suave podrá verse la señal, sobre todo si después se usa un filtro pasa-bajas.
 
 ## Ejercicio
 Se basarán en el [DAC R-2R](#3-dac-r-2r) y el archivo de Proteus [3_DAC_R_2R.pdsprj](3_DAC_R_2R.pdsprj). Si tienen resistencias de 2 k$\Omega$, el circuito en Protoboard es
@@ -91,3 +121,5 @@ Se basarán en el [DAC R-2R](#3-dac-r-2r) y el archivo de Proteus [3_DAC_R_2R.pd
 Y si no consiguen resistencias de 1 k$\Omega$, entonces se usará:
 
 ![](img/DAC_R_2R_protoboard_1k.svg)
+
+* Van a medir con el osciloscopio la salida del DAC y la salida del filtro.
