@@ -475,4 +475,4 @@ Como su nombre lo indica, combina las características de ambos filtros, lo que 
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_ADC_suma_ponderada/ADC_suma_ponderada.md) |
+| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_DAC/DAC.md) |
