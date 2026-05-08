@@ -468,7 +468,7 @@ En la página de [Wilaeba Electrónica](https://wilaebaelectronica.blogspot.com/
 
 Como su nombre lo indica, combina las características de ambos filtros, lo que permite dejar pasar solo frecuencias que se encuentran entre las frecuencias de corte elegidas. Hay un circuito que se puede hacer usando un solo amplificador operacional, pero también se pueden combinar los dos.
 
-![Filtro pasa banda](img\Ganancia_Filtro_Pasa_banda.png)
+![Filtro pasa banda](img/Ganancia_Filtro_Pasa_banda.png)
 
 #### 4.3. Ejercicios
 - Combina los dos filtros y verifica que deja pasar las frecuencias entre 490 y 980 Hz.
