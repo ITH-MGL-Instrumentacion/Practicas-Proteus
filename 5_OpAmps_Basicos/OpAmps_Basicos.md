@@ -218,7 +218,7 @@ $$R_P = R_1||R_2||\cdots||R_n$$
 
 Es la versión completa de los casos anteriores.
 
-![Imagen de OpAmp Sumador restador](img/OpAmp_Sumador_restador.svg)
+![Imagen de OpAmp Sumador restador](img/OpAmp_Sumador_restador.SVG)
 
 Para un circuito sumador/restador con múltiples entradas ponderadas:
 
