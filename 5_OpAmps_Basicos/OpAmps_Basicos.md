@@ -262,7 +262,7 @@ Se les dice filtros porque amplifican o atenúan el voltaje dependiendo de qué 
 #### 4.1. Integrador (filtro pasa bajas)
 Realiza la operación matemática de integración. Es decir, el voltaje de salida es la integral del voltaje de entrada. Usualmente, se representa con una bobina porque almacena voltaje en forma de campo eléctrico.
 
-[![OpAmp Integrador](img/OpAmp_integrador_bobina.SVG)](img/OpAmp_integrador_bobina.SVG)
+[![OpAmp Integrador](img/OpAmp_integrador_bobina.SVG)](img/OpAmp_integrador_bobina.svg)
 
 En este caso, el voltaje resultante se obtiene con la ecuación:
 
@@ -274,7 +274,7 @@ Donde $k$ representa la condición inicial del voltaje almacenado en forma de ca
 
 El inconveniente de las bobinas es que es difícil miniaturizarlas para ponerlas en circuitos integrados. Además, el campo magnético puede influir en otras partes del circuito, por lo que normalmente se usan condensadores con la siguiente configuración:
 
-[![OpAmp Integrador](img/OpAmp_integrador_1.SVG)](img/OpAmp_integrador_1.SVG)
+[![OpAmp Integrador](img/OpAmp_integrador_1.SVG)](img/OpAmp_integrador_1.svg)
 
 Cuya ecuación es:
 
