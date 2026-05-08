@@ -176,7 +176,7 @@ Se recomienda que cada entrada pase por un seguidor o buffer, ya que al tener un
 
 El caso general es el Amplificador sumador-restador que se muestra en la siguiente imagen, pero se irán viendo casos más específicos y útiles. 
 
-![Imagen de amplificador sumador restador](img/OpAmp_Sumador_restador.svg)
+![Imagen de amplificador sumador restador](img/OpAmp_Sumador_restador.SVG)
 
 Para un circuito sumador/restador con múltiples entradas ponderadas:
 
