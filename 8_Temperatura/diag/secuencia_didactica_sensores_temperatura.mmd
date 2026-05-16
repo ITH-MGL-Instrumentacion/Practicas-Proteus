@@ -1,0 +1,24 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': 'transparent', 'primaryColor': '#f5efe2', 'primaryTextColor': '#2b2b2b', 'primaryBorderColor': '#8b5e3c', 'lineColor': '#6b7280', 'fontFamily': 'Trebuchet MS, Verdana, sans-serif', 'fontSize': '20px'}}}%%
+graph LR
+  A[Secuencia didactica recomendada]:::root --> B[1. NTC en divisor]:::step1
+  B --> C[2. LM35 o TMP36]:::step2
+  C --> D[3. RTD]:::step3
+  D --> E[4. Termopar]:::step4
+  E --> F[5. Sensores digitales]:::step5
+  F --> G[6. Sensores internos y sin contacto]:::step6
+
+  B --> B1[Visible y simple]:::leaf
+  C --> C1[Analogico lineal]:::leaf
+  D --> D1[Mas precision]:::leaf
+  E --> E1[Instrumentacion y compensacion]:::leaf
+  F --> F1[Protocolos y modulos]:::leaf
+  G --> G1[Panorama general]:::leaf
+
+  classDef root fill:#d8ead3,stroke:#4f772d,stroke-width:3px,color:#1f2937,font-size:24px;
+  classDef step1 fill:#fce5cd,stroke:#b45f06,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef step2 fill:#d9eaf7,stroke:#3d85c6,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef step3 fill:#fff2cc,stroke:#bf9000,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef step4 fill:#f4cccc,stroke:#a61c00,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef step5 fill:#e6e0f8,stroke:#674ea7,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef step6 fill:#f9e2ef,stroke:#a64d79,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef leaf fill:#ffffff,stroke:#6b7280,stroke-width:1.5px,color:#1f2937,font-size:18px;

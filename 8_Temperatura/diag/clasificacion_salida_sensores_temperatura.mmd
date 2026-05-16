@@ -1,0 +1,33 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': 'transparent', 'primaryColor': '#f7ead9', 'primaryTextColor': '#2b2b2b', 'primaryBorderColor': '#9c6b30', 'lineColor': '#6b7280', 'fontFamily': 'Trebuchet MS, Verdana, sans-serif', 'fontSize': '20px'}}}%%
+graph TD
+  A[Clasificacion por tipo de salida]:::root --> B[Salida resistiva]:::res
+  A --> C[Salida analogica de voltaje]:::analog
+  A --> D[Salida diferencial pequena]:::diff
+  A --> E[Salida digital]:::digital
+  A --> F[Salida radiativa procesada]:::rad
+
+  B --> B1[NTC]:::leaf
+  B --> B2[PTC]:::leaf
+  B --> B3[RTD]:::leaf
+
+  C --> C1[LM35]:::leaf
+  C --> C2[TMP36]:::leaf
+
+  D --> D1[Termopares]:::leaf
+  D1 --> D2[Requieren amplificador de instrumentacion]:::leaf
+
+  E --> E1[DS18B20]:::leaf
+  E --> E2[DHT11 o DHT22]:::leaf
+  E --> E3[BMP o BME280]:::leaf
+  E --> E4[IMU con temperatura interna]:::leaf
+
+  F --> F1[Infrarrojos]:::leaf
+  F --> F2[Termopilas]:::leaf
+
+  classDef root fill:#d8ead3,stroke:#4f772d,stroke-width:3px,color:#1f2937,font-size:24px;
+  classDef res fill:#fce5cd,stroke:#b45f06,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef analog fill:#d9eaf7,stroke:#3d85c6,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef diff fill:#f4cccc,stroke:#a61c00,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef digital fill:#e6e0f8,stroke:#674ea7,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef rad fill:#f9e2ef,stroke:#a64d79,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef leaf fill:#ffffff,stroke:#6b7280,stroke-width:1.5px,color:#1f2937,font-size:18px;

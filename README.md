@@ -34,3 +34,10 @@ Estas prácticas están enfocadas en entender cómo las señales pasan de ser an
 ### Convertidor analógico - digital
 
 7. [ADC](7_ADC/ADC.md): Convertidor analógico-digital por seguimiento con el DAC R-2R.
+
+
+## Prácticas de instrumentación
+
+8. [Teoría de sensores de temperatura](8_Temperatura\8_Teoría_Temperatura.md): Clasificación de sensores de temperatura, principios de operación y configuraciones recomendadas en Proteus.
+9. [Prácticas de sensores de temperatura](8_Temperatura\8_Practicas_Temperatura.md): Medición con NTC de 10 kΩ, termopares y compensación de unión fría.
+10. [Modelado y control didáctico de temperatura](9_Temperatura_Modelado_Control\9_Temperatura_Modelado_Control.md): Identificación dinámica de una incubadora simple y comparación de estrategias básicas de control.

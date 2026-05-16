@@ -1,0 +1,66 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': 'transparent', 'primaryColor': '#f5efe2', 'primaryTextColor': '#2b2b2b', 'primaryBorderColor': '#8b5e3c', 'lineColor': '#6b7280', 'fontFamily': 'Trebuchet MS, Verdana, sans-serif', 'fontSize': '20px'}}}%%
+flowchart TB
+  subgraph T1[Panel de sensores de temperatura en Proteus]
+    direction TB
+    subgraph L1[Sensores resistivos]
+      direction TB
+      N1[NTC]
+      N2[PTC]
+      N3[RTD]
+    end
+
+    subgraph L2[Sensores analogicos integrados]
+      direction TB
+      A1[LM35]
+      A2[TMP36]
+    end
+
+    subgraph L3[Sensores diferenciales]
+      direction TB
+      D1[Termopar]
+      D2[Amp. de instrumentacion]
+    end
+
+    subgraph L4[Modulos digitales]
+      direction TB
+      M1[DS18B20]
+      M2[DHT11 o DHT22]
+      M3[BMP o BME280]
+    end
+
+    subgraph L5[Compensacion interna]
+      direction TB
+      C1[Barometro]
+      C2[IMU]
+    end
+
+    subgraph C0[Visualizacion central]
+      direction TB
+      U1[Arduino]
+      U2[LCD o terminal virtual]
+      U3[LEDs o PWM]
+    end
+  end
+
+  N1 --> U1
+  N2 --> U1
+  N3 --> U1
+  A1 --> U1
+  A2 --> U1
+  D2 --> U1
+  M1 --> U1
+  M2 --> U1
+  M3 --> U1
+  C1 --> U1
+  C2 --> U1
+  U1 --> U2
+  U1 --> U3
+  D1 --> D2
+
+  classDef group fill:#f8f4ea,stroke:#8b5e3c,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef center fill:#d8ead3,stroke:#4f772d,stroke-width:3px,color:#1f2937,font-size:22px;
+  classDef node fill:#ffffff,stroke:#6b7280,stroke-width:1.5px,color:#1f2937,font-size:18px;
+  class T1 group;
+  class L1,L2,L3,L4,L5 group;
+  class C0 center;
+  class N1,N2,N3,A1,A2,D1,D2,M1,M2,M3,C1,C2,U1,U2,U3 node;

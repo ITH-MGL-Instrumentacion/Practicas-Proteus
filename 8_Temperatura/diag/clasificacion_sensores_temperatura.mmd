@@ -1,0 +1,47 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "transparent",
+    "primaryColor": "#f3f0e6",
+    "primaryTextColor": "#1f2937",
+    "primaryBorderColor": "#8b5e3c",
+    "lineColor": "#6b7280",
+    "fontFamily": "Georgia",
+    "fontSize": "20px"
+  }
+}}%%
+graph TD
+  A[Sensores de temperatura]:::root --> B[Resistivos]:::res
+  A --> C[Termoelectricos]:::term
+  A --> D[Semiconductores integrados]:::semi
+  A --> E[Radiativos]:::rad
+
+  B --> B1[NTC]:::leaf
+  B --> B2[PTC]:::leaf
+  B --> B3[RTD]:::leaf
+  B1 --> B1a[Cambian su resistencia]:::leaf
+  B2 --> B1a
+  B3 --> B1a
+
+  C --> C1[Termopares]:::leaf
+  C1 --> C2[Generan voltaje por efecto Seebeck]:::leaf
+
+  D --> D1[Analogicos]:::leaf
+  D --> D2[Digitales]:::leaf
+  D1 --> D1a[LM35]:::leaf
+  D1 --> D1b[TMP36]:::leaf
+  D2 --> D2a[DS18B20]:::leaf
+  D2 --> D2b[DHT11 o DHT22]:::leaf
+  D2 --> D2c[BMP o BME o IMU]:::leaf
+
+  E --> E1[Infrarrojos]:::leaf
+  E --> E2[Termopilas]:::leaf
+  E1 --> E3[Miden radiacion termica]:::leaf
+  E2 --> E3
+
+  classDef root fill:#d8ead3,stroke:#4f772d,stroke-width:3px,color:#1f2937,font-size:22px;
+  classDef res fill:#fce5cd,stroke:#b45f06,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef term fill:#f4cccc,stroke:#a61c00,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef semi fill:#d9eaf7,stroke:#3d85c6,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef rad fill:#e6e0f8,stroke:#674ea7,stroke-width:2px,color:#1f2937,font-size:20px;
+  classDef leaf fill:#ffffff,stroke:#6b7280,stroke-width:1.5px,color:#1f2937,font-size:18px;
