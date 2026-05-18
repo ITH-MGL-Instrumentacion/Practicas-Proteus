@@ -13,3 +13,13 @@
 .venv/
 .vscode/
 *.fzz
+
+# Local folders kept out of git
+8_Temperatura/
+9_Temperatura_Modelado_Control/
+requirements.txt
+setup.ps1
+5_OpAmps_Basicos/Prueba.py
+6_DAC/3_DAC_2_2R_esp32.py
+6_DAC/Prueba.py
+6_DAC/DAC_calculos.ipynb
