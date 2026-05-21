@@ -23,3 +23,8 @@ setup.ps1
 6_DAC/3_DAC_2_2R_esp32.py
 6_DAC/Prueba.py
 6_DAC/DAC_calculos.ipynb
+/10_Semiconductores
+/11_RTD
+/12_Termopares
+/13_Piezoresistivo
+/14_Galga_extensiometrica
