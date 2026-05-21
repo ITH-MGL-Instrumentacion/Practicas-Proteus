@@ -1,31 +1,32 @@
-<h1>Termistores NTC y PTC</h1>
+# Termistores NTC y PTC
 
 En esta sección se estudian los termistores como sensores resistivos dependientes de la temperatura. La idea es pasar de un sensor resistivo genérico a dos casos útiles: una práctica base con el NTC por defecto de Proteus y una referencia más específica con un NTC real orientado a un punto de trabajo cercano a `37.7 °C`.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Introducción a sensores](../8_Sensores/8_Sensores.md) | [Volver al índice](../README.md) | [Sensores semiconductores](../10_Semiconductores/10_Semiconductores.md) |
+| [Introducción a sensores](../8_Sensores/8_Sensores.md#introducción-a-sensores-y-acondicionamiento-básico) | [Volver al índice](../README.md) | [Amplificador de instrumentación](../10_Amp_Instrumentacion/10_Amp_Instrumentacion.md#amplificador-de-instrumentación) |
 
 <h2>Índice</h2>
 
-- [1. Termistores](#1-termistores)
-- [2. NTC y PTC](#2-ntc-y-ptc)
-	- [No linealidad y modelado matemático](#no-linealidad-y-modelado-matemático)
-		- [Modelo beta](#modelo-beta)
-		- [Ecuación de Seinhart-Hart](#ecuación-de-seinhart-hart)
-	- [Importancia del rango de medición](#importancia-del-rango-de-medición)
-- [3. Lectura con divisor de voltaje](#3-lectura-con-divisor-de-voltaje)
-- [4. Práctica base: NTC por defecto de Proteus](#4-práctica-base-ntc-por-defecto-de-proteus)
-	- [Archivo de la práctica base](#archivo-de-la-práctica-base)
-	- [Conexión sugerida](#conexión-sugerida)
-	- [Algoritmo](#algoritmo)
-	- [Funciones necesarias](#funciones-necesarias)
-- [5. Caso específico: autocalentamiento cerca de 37.7 °C](#5-caso-específico-autocalentamiento-cerca-de-377-c)
-	- [Práctica adicional: medición con excitación por pulsos](#práctica-adicional-medición-con-excitación-por-pulsos)
-	- [Conexión sugerida](#conexión-sugerida-1)
-	- [Secuencia de medición](#secuencia-de-medición)
-	- [Código de ejemplo](#código-de-ejemplo)
-	- [Práctica](#práctica)
+- [Termistores NTC y PTC](#termistores-ntc-y-ptc)
+	- [1. Termistores](#1-termistores)
+	- [2. NTC y PTC](#2-ntc-y-ptc)
+		- [No linealidad y modelado matemático](#no-linealidad-y-modelado-matemático)
+			- [Modelo beta](#modelo-beta)
+			- [Ecuación de Seinhart-Hart](#ecuación-de-seinhart-hart)
+		- [Importancia del rango de medición](#importancia-del-rango-de-medición)
+	- [3. Lectura con divisor de voltaje](#3-lectura-con-divisor-de-voltaje)
+	- [4. Práctica base: NTC por defecto de Proteus](#4-práctica-base-ntc-por-defecto-de-proteus)
+		- [Archivo de la práctica base](#archivo-de-la-práctica-base)
+		- [Conexión sugerida](#conexión-sugerida)
+		- [Algoritmo](#algoritmo)
+		- [Funciones necesarias](#funciones-necesarias)
+	- [5. Caso específico: autocalentamiento cerca de 37.7 °C](#5-caso-específico-autocalentamiento-cerca-de-377-c)
+		- [Práctica adicional: medición con excitación por pulsos](#práctica-adicional-medición-con-excitación-por-pulsos)
+		- [Conexión sugerida](#conexión-sugerida-1)
+		- [Secuencia de medición](#secuencia-de-medición)
+		- [Código de ejemplo](#código-de-ejemplo)
+		- [Práctica](#práctica)
 
 ## 1. Termistores
 
@@ -356,4 +357,4 @@ Este ejemplo no elimina por completo el autocalentamiento, pero sí lo reduce al
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Introducción a sensores](../8_Sensores/8_Sensores.md) | [Volver al índice](../README.md) | [Sensores semiconductores](../10_Semiconductores/10_Semiconductores.md) |
+| [Introducción a sensores](../8_Sensores/8_Sensores.md#introducción-a-sensores-y-acondicionamiento-básico) | [Volver al índice](../README.md) | [Amplificador de instrumentación](../10_Amp_Instrumentacion/10_Amp_Instrumentacion.md#amplificador-de-instrumentación) |

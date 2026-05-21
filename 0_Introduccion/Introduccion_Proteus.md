@@ -1,10 +1,14 @@
+# Introducción a Proteus
 
-<h1>Introducción a Proteus</h1>
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Introducción a Arduino](Introduccion_Arduino.md) | [Volver al índice](../README.md) | [Formato de los proyectos en Visual Studio Code](Formato_proyectos.md) |
 
-- [¿Qué es Proteus?](#qué-es-proteus)
-- [Integración con Arduino](#integración-con-arduino)
-  - [Instalación de archivos de Arduino](#instalación-de-archivos-de-arduino)
-  - [Editar código en el simulador](#editar-código-en-el-simulador)
+- [Introducción a Proteus](#introducción-a-proteus)
+  - [¿Qué es Proteus?](#qué-es-proteus)
+  - [Integración con Arduino](#integración-con-arduino)
+    - [Instalación de archivos de Arduino](#instalación-de-archivos-de-arduino)
+    - [Editar código en el simulador](#editar-código-en-el-simulador)
 
 ## ¿Qué es Proteus?
 

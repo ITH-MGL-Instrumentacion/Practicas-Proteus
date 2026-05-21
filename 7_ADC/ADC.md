@@ -1,12 +1,17 @@
-<h1>Convertidores analógico-digital</h1>
+# Convertidores analógico-digital
 
 En esta sección se explica el funcionamiento de algunos convertidores analógico-digital (ADC por sus siglas en inglés). La idea es ver cómo una señal analógica, por ejemplo el voltaje de un potenciómetro, puede convertirse en un número binario que después puede usarse para visualizar, procesar o controlar otras salidas.
 
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Convertidores digital-analógico](../6_DAC/DAC.md) | [Volver al índice](../README.md) | [Introducción a sensores](../8_Sensores/8_Sensores.md#introducción-a-sensores-y-acondicionamiento-básico) |
+
 <h2>Índice</h2>
 
-- [1. ADC flash](#1-adc-flash)
-- [2. ADC por seguimiento](#2-adc-por-seguimiento)
-- [Práctica](#práctica)
+- [Convertidores analógico-digital](#convertidores-analógico-digital)
+  - [1. ADC flash](#1-adc-flash)
+  - [2. ADC por seguimiento](#2-adc-por-seguimiento)
+  - [Práctica](#práctica)
 
 ## 1. ADC flash
 
@@ -80,3 +85,7 @@ Una ventaja importante de este método es que necesita pocos bloques: un compara
 2. Identifica en el circuito qué parte corresponde al DAC, cuál al comparador y cuál a la lógica de seguimiento implementada en el Arduino.
 3. Ahora, en vez de un potenciómetro, usa un generador de funciones y conecta el osciloscopio como se muestra en Proteus para comparar la señal de entrada con la señal reconstruida.
 4. Explica por qué el ADC flash es más rápido que el ADC por seguimiento, pero también por qué resulta mucho más complejo cuando aumenta el número de bits.
+
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Convertidores digital-analógico](../6_DAC/DAC.md) | [Volver al índice](../README.md) | [Introducción a sensores](../8_Sensores/8_Sensores.md#introducción-a-sensores-y-acondicionamiento-básico) |

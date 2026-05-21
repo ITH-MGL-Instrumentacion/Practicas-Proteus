@@ -1,25 +1,26 @@
-<h1>Amplificador de instrumentación</h1>
+# Amplificador de instrumentación
 
 En esta sección se introduce el amplificador de instrumentación como bloque de acondicionamiento para sensores que entregan señales diferenciales pequeñas. La idea es entender por qué no basta con un amplificador cualquiera y cómo este bloque se vuelve especialmente útil cuando un sensor resistivo, como un NTC dentro de un puente de Wheatstone, genera solo una diferencia de voltaje muy pequeña.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Modelado y control de temperatura](../9_Termistores/9_Termistores.md) | [Volver al índice](../README.md) | [Modelado y control de incubadora](../11_Modelado_y_control/11_Modelado_y_control.md) |
+| [Termistores](../9_Termistores/9_Termistores.md#termistores-ntc-y-ptc) | [Volver al índice](../README.md) | [Modelado y control de incubadora](../11_Modelado_y_control/11_Modelado_y_control.md) |
 
 <h2>Índice</h2>
 
-- [Objetivo](#objetivo)
-- [1. ¿Qué es un amplificador de instrumentación?](#1-qué-es-un-amplificador-de-instrumentación)
-- [2. ¿Por qué no basta un amplificador operacional simple?](#2-por-qué-no-basta-un-amplificador-operacional-simple)
-- [3. Puente de Wheatstone con NTC](#3-puente-de-wheatstone-con-ntc)
-- [4. Procedimiento de diseño y calibración](#4-procedimiento-de-diseño-y-calibración)
-	- [Rango de temperatura recomendado](#rango-de-temperatura-recomendado)
-	- [Elección de la resistencia de referencia del puente](#elección-de-la-resistencia-de-referencia-del-puente)
-	- [Uso de la referencia interna de `1.1 V`](#uso-de-la-referencia-interna-de-11-v)
-	- [Cálculo previo antes de calibrar](#cálculo-previo-antes-de-calibrar)
-	- [Procedimiento práctico de calibración](#procedimiento-práctico-de-calibración)
-	- [Validación final](#validación-final)
-- [5. Actividades](#5-actividades)
+- [Amplificador de instrumentación](#amplificador-de-instrumentación)
+	- [Objetivo](#objetivo)
+	- [1. ¿Qué es un amplificador de instrumentación?](#1-qué-es-un-amplificador-de-instrumentación)
+	- [2. ¿Por qué no basta un amplificador operacional simple?](#2-por-qué-no-basta-un-amplificador-operacional-simple)
+	- [3. Puente de Wheatstone con NTC](#3-puente-de-wheatstone-con-ntc)
+	- [4. Procedimiento de diseño y calibración](#4-procedimiento-de-diseño-y-calibración)
+		- [Rango de temperatura recomendado](#rango-de-temperatura-recomendado)
+		- [Elección de la resistencia de referencia del puente](#elección-de-la-resistencia-de-referencia-del-puente)
+		- [Uso de la referencia interna de `1.1 V`](#uso-de-la-referencia-interna-de-11-v)
+		- [Cálculo previo antes de calibrar](#cálculo-previo-antes-de-calibrar)
+		- [Procedimiento práctico de calibración](#procedimiento-práctico-de-calibración)
+		- [Validación final](#validación-final)
+	- [5. Actividades](#5-actividades)
 
 ## Objetivo
 
@@ -238,4 +239,4 @@ La validación final ideal es:
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Modelado y control de temperatura](../9_Termistores/9_Termistores.md) | [Volver al índice](../README.md) | [Modelado y control de incubadora](../11_Modelado_y_control/11_Modelado_y_control.md) |
+| [Termistores](../9_Termistores/9_Termistores.md#termistores-ntc-y-ptc) | [Volver al índice](../README.md) | [Modelado y control de incubadora](../11_Modelado_y_control/11_Modelado_y_control.md) |

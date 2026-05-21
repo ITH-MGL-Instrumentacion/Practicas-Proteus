@@ -1,19 +1,20 @@
-<h1>Introducción a sensores y acondicionamiento básico</h1>
+# Introducción a sensores y acondicionamiento básico
 
 En esta sección se introduce la idea general de sensor como bloque que transforma una magnitud física en una señal eléctrica medible. La meta no es estudiar todavía un sensor industrial específico, sino entender dos formas muy comunes de obtener una señal útil con Arduino: el divisor de voltaje y el puente de Wheatstone.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [ADC](../7_ADC/ADC.md) | [Volver al índice](../README.md) | [Termistores](../9_Termistores/9_Termistores.md) |
+| [ADC](../7_ADC/ADC.md) | [Volver al índice](../README.md) | [Termistores](../9_Termistores/9_Termistores.md#termistores-ntc-y-ptc) |
 
 <h2>Índice</h2>
 
-- [Objetivo](#objetivo)
-- [1. ¿Qué hace un sensor?](#1-qué-hace-un-sensor)
-- [2. Divisor de voltaje](#2-divisor-de-voltaje)
-	- [Problemas del divisor de tensión](#problemas-del-divisor-de-tensión)
-	- [Práctica base: potenciómetro como sensor en divisor](#práctica-base-potenciómetro-como-sensor-en-divisor)
-- [2. Puente de Wheatstone](#2-puente-de-wheatstone)
+- [Introducción a sensores y acondicionamiento básico](#introducción-a-sensores-y-acondicionamiento-básico)
+	- [Objetivo](#objetivo)
+	- [1. ¿Qué hace un sensor?](#1-qué-hace-un-sensor)
+	- [2. Divisor de voltaje](#2-divisor-de-voltaje)
+		- [Problemas del divisor de tensión](#problemas-del-divisor-de-tensión)
+		- [Práctica base: potenciómetro como sensor en divisor](#práctica-base-potenciómetro-como-sensor-en-divisor)
+	- [2. Puente de Wheatstone](#2-puente-de-wheatstone)
 
 ## Objetivo
 
@@ -154,4 +155,4 @@ Por eso aparece con frecuencia en RTD, galgas extensiométricas y sensores piezo
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [ADC](../7_ADC/ADC.md) | [Volver al índice](../README.md) | [Termistores](../9_Termistores/9_Termistores.md) |
+| [ADC](../7_ADC/ADC.md) | [Volver al índice](../README.md) | [Termistores](../9_Termistores/9_Termistores.md#termistores-ntc-y-ptc) |
