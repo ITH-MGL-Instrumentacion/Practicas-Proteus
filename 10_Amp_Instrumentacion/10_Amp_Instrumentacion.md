@@ -4,7 +4,7 @@ En esta sección se introduce el amplificador de instrumentación como bloque de
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Modelado y control de temperatura](../9_Temperatura_Modelado_Control/9_Temperatura_Modelado_Control.md) | [Volver al índice](../README.md) | [RTD y termorresistencias](../11_RTD/11_RTD.md) |
+| [Modelado y control de temperatura](../9_Termistores/9_Termistores.md) | [Volver al índice](../README.md) | [Modelado y control de incubadora](../11_Modelado_y_control/11_Modelado_y_control.md) |
 
 <h2>Índice</h2>
 
