@@ -1,15 +1,20 @@
-<h1>Convertidores digital-analógico</h1>
+# Convertidores digital-analógico
 
 ![](img/DAC.png)
 
 En esta sección se explica el funcionamiento de algunos convertidores digital-analógico (DAC por sus siglas en inglés). De esta forma, se creará un generador de funciones por medio de configuraciones con amplificadores operacionales, siendo un paso importante el filtrado para que no se vean escalones.
 
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Amplificadores operacionales básicos](../5_OpAmps_Basicos/OpAmps_Basicos.md) | [Volver al índice](../README.md) | [Convertidores analógico-digital](../7_ADC/ADC.md#convertidores-analógico-digital) |
+
 <h2>Índice</h2>
 
-- [1. DAC con PWM](#1-dac-con-pwm)
-- [2. DAC por suma ponderada](#2-dac-por-suma-ponderada)
-- [3. DAC R-2R](#3-dac-r-2r)
-- [Ejercicio](#ejercicio)
+- [Convertidores digital-analógico](#convertidores-digital-analógico)
+  - [1. DAC con PWM](#1-dac-con-pwm)
+  - [2. DAC por suma ponderada](#2-dac-por-suma-ponderada)
+  - [3. DAC R-2R](#3-dac-r-2r)
+  - [Ejercicio](#ejercicio)
 
 
 ## 1. DAC con PWM
@@ -123,3 +128,7 @@ Y si no consiguen resistencias de 1 k$\Omega$, entonces se usará:
 ![](img/DAC_R_2R_protoboard_1k.svg)
 
 * Van a medir con el osciloscopio la salida del DAC y la salida del filtro.
+
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Amplificadores operacionales básicos](../5_OpAmps_Basicos/OpAmps_Basicos.md) | [Volver al índice](../README.md) | [Convertidores analógico-digital](../7_ADC/ADC.md#convertidores-analógico-digital) |

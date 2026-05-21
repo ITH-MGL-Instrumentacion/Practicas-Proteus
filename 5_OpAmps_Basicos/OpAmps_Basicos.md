@@ -1,38 +1,43 @@
-<h1>Amplificadores operacionales básicos</h1>
+# Amplificadores operacionales básicos
 
 Esta sección es más técnica que las anteriores, ya que tiene como objetivo entender las configuraciones básicas de un amplificador operacional. En este caso, no se programará nada en Arduino, pero sí se realizarán cambios en las resistencias para entender las ecuaciones matemáticas.
 
 > Subirán los **videos** de cada archivo de Proteus resolviendo las preguntas y explicando el funcionamiento de los problemas resueltos.
 
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_DAC/DAC.md) |
+
 <h2>Índice</h2>
 
-- [Archivos](#archivos)
-- [Tipos de circuitos integrados](#tipos-de-circuitos-integrados)
-  - [1. LM741 (Obsoleto)](#1-lm741-obsoleto)
-  - [2. LM358 y LM324 (Uso general)](#2-lm358-y-lm324-uso-general)
-  - [3. LM339 y LM393 (Especialistas en comparar)](#3-lm339-y-lm393-especialistas-en-comparar)
-  - [4. TL081 y TL082](#4-tl081-y-tl082)
-- [Aplicaciones clásicas](#aplicaciones-clásicas)
-  - [1. Básicos](#1-básicos)
-    - [1.1. Comparador](#11-comparador)
-    - [1.2. Seguidor de voltaje](#12-seguidor-de-voltaje)
-    - [Prueba sugerida](#prueba-sugerida)
-  - [2. Amplificadores](#2-amplificadores)
-    - [2.1. Amplificador inversor](#21-amplificador-inversor)
-    - [Ejercicio](#ejercicio)
-    - [2.2. Amplificador No inversor](#22-amplificador-no-inversor)
-  - [3. Amplificador sumador/restador](#3-amplificador-sumadorrestador)
-    - [3.1. Amplificador sumador inversor](#31-amplificador-sumador-inversor)
-    - [3.2. Amplificador sumador no inversor](#32-amplificador-sumador-no-inversor)
-    - [3.3. Amplificador sumador restador](#33-amplificador-sumador-restador)
-    - [Ejercicio](#ejercicio-1)
-  - [4. Filtros (Derivador e integrador)](#4-filtros-derivador-e-integrador)
-    - [4.1. Integrador (filtro pasa bajas)](#41-integrador-filtro-pasa-bajas)
-    - [4.1. Ejercicios](#41-ejercicios)
-    - [4.2. Derivador (filtro pasa altas)](#42-derivador-filtro-pasa-altas)
-    - [4.2. Ejercicios](#42-ejercicios)
-    - [4.3. Derivador-Integrador (Filtro pasa banda)](#43-derivador-integrador-filtro-pasa-banda)
-    - [4.3. Ejercicios](#43-ejercicios)
+- [Amplificadores operacionales básicos](#amplificadores-operacionales-básicos)
+  - [Archivos](#archivos)
+  - [Tipos de circuitos integrados](#tipos-de-circuitos-integrados)
+    - [1. LM741 (Obsoleto)](#1-lm741-obsoleto)
+    - [2. LM358 y LM324 (Uso general)](#2-lm358-y-lm324-uso-general)
+    - [3. LM339 y LM393 (Especialistas en comparar)](#3-lm339-y-lm393-especialistas-en-comparar)
+    - [4. TL081 y TL082](#4-tl081-y-tl082)
+  - [Aplicaciones clásicas](#aplicaciones-clásicas)
+    - [1. Básicos](#1-básicos)
+      - [1.1. Comparador](#11-comparador)
+      - [1.2. Seguidor de voltaje](#12-seguidor-de-voltaje)
+      - [Prueba sugerida](#prueba-sugerida)
+    - [2. Amplificadores](#2-amplificadores)
+      - [2.1. Amplificador inversor](#21-amplificador-inversor)
+      - [Ejercicio](#ejercicio)
+      - [2.2. Amplificador No inversor](#22-amplificador-no-inversor)
+    - [3. Amplificador sumador/restador](#3-amplificador-sumadorrestador)
+      - [3.1. Amplificador sumador inversor](#31-amplificador-sumador-inversor)
+      - [3.2. Amplificador sumador no inversor](#32-amplificador-sumador-no-inversor)
+      - [3.3. Amplificador sumador restador](#33-amplificador-sumador-restador)
+      - [Ejercicio](#ejercicio-1)
+    - [4. Filtros (Derivador e integrador)](#4-filtros-derivador-e-integrador)
+      - [4.1. Integrador (filtro pasa bajas)](#41-integrador-filtro-pasa-bajas)
+      - [4.1. Ejercicios](#41-ejercicios)
+      - [4.2. Derivador (filtro pasa altas)](#42-derivador-filtro-pasa-altas)
+      - [4.2. Ejercicios](#42-ejercicios)
+      - [4.3. Derivador-Integrador (Filtro pasa banda)](#43-derivador-integrador-filtro-pasa-banda)
+      - [4.3. Ejercicios](#43-ejercicios)
 
 
 ## Archivos
