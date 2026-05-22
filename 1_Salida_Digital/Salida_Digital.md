@@ -1,12 +1,17 @@
-<h1>Salida digital con Arduino</h1>
+# Salida digital con Arduino
 
-- [¿Qué es una salida digital?](#qué-es-una-salida-digital)
-- [Práctica: LED parpadeando en el pin 3](#práctica-led-parpadeando-en-el-pin-3)
-  - [Archivos de la práctica](#archivos-de-la-práctica)
-  - [¿Qué hace el código?](#qué-hace-el-código)
-- [Ejercicios adicionales](#ejercicios-adicionales)
-  - [1. Cambia el tiempo de encendido y apagado para modificar la velocidad de parpadeo.](#1-cambia-el-tiempo-de-encendido-y-apagado-para-modificar-la-velocidad-de-parpadeo)
-  - [2. Añade otro LED en el pin digital `5` y haz que parpadee con un patrón distinto al del pin `3`.](#2-añade-otro-led-en-el-pin-digital-5-y-haz-que-parpadee-con-un-patrón-distinto-al-del-pin-3)
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Formato de los proyectos en Visual Studio Code](../0_Introduccion/Formato_proyectos.md) | [Volver al índice](../README.md) | [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) |
+
+- [Salida digital con Arduino](#salida-digital-con-arduino)
+  - [¿Qué es una salida digital?](#qué-es-una-salida-digital)
+  - [Práctica: LED parpadeando en el pin 3](#práctica-led-parpadeando-en-el-pin-3)
+    - [Archivos de la práctica](#archivos-de-la-práctica)
+    - [¿Qué hace el código?](#qué-hace-el-código)
+  - [Ejercicios adicionales](#ejercicios-adicionales)
+    - [1. Cambia el tiempo de encendido y apagado para modificar la velocidad de parpadeo.](#1-cambia-el-tiempo-de-encendido-y-apagado-para-modificar-la-velocidad-de-parpadeo)
+    - [2. Añade otro LED en el pin digital `5` y haz que parpadee con un patrón distinto al del pin `3`.](#2-añade-otro-led-en-el-pin-digital-5-y-haz-que-parpadee-con-un-patrón-distinto-al-del-pin-3)
 
 ## ¿Qué es una salida digital?
 
