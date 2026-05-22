@@ -1,11 +1,15 @@
+# Introducción a Arduino
 
-<h1>Introducción a Arduino</h1>
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Introducción](../README.md#temas-de-introducción) | [Volver al índice](../README.md) | [Introducción a Proteus](Introduccion_Proteus.md) |
 
-- [¿Qué es Arduino?](#qué-es-arduino)
-- [Arduino UNO](#arduino-uno)
-- [Instalación](#instalación)
-  - [Paso 1: Descargar Arduino IDE](#paso-1-descargar-arduino-ide)
-  - [Paso 2: Instalar](#paso-2-instalar)
+- [Introducción a Arduino](#introducción-a-arduino)
+  - [¿Qué es Arduino?](#qué-es-arduino)
+  - [Arduino UNO](#arduino-uno)
+  - [Instalación](#instalación)
+    - [Paso 1: Descargar Arduino IDE](#paso-1-descargar-arduino-ide)
+    - [Paso 2: Instalar](#paso-2-instalar)
 
 ## ¿Qué es Arduino?
 
