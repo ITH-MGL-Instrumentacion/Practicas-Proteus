@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="66.099998mm"
+   height="31.161388mm"
+   viewBox="0 0 1322 623.22776"
+   version="1.2"
+   id="svg52"
+   sodipodi:docname="OpAmp_integrador_bobina.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview52"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.668396"
+     inkscape:cx="131.91445"
+     inkscape:cy="63.708685"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg52" />
+  <title
+     id="title1">Proteus Design Suite SVG export</title>
+  <desc
+     id="desc1">Created by Proteus Design Suite</desc>
+  <defs
+     id="defs1" />
+  <g
+     fill="#ffffff"
+     fill-opacity="1"
+     stroke="none"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g1"
+     style="fill-rule:evenodd;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel"
+     transform="scale(1,0.55695063)">
+    <path
+       vector-effect="non-scaling-stroke"
+       fill-rule="evenodd"
+       d="M 0,0 H 1322 V 1119 H 0 V 0"
+       id="path1" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g2"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 915,661 h 152"
+       id="path2" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g3"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 915,661 h 51"
+       id="path3" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g4"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 509,762 v -51 h 50"
+       id="path4" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g5"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 559,610 H 509"
+       id="path5" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g6"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 204,610 H 102"
+       id="path6" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g7"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 559,610"
+       id="path7" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g8"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 610,407 H 559 V 610"
+       id="path8" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g9"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 915,661 V 407 h -51"
+       id="path9" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g10"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="509,762 509,813 "
+       id="polyline9" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g11"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="458,813 559,813 "
+       id="polyline10" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g12"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="483,838 534,838 "
+       id="polyline11" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g13"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="504,864 514,864 "
+       id="polyline12" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-linejoin="bevel"
+     font-family="Arial"
+     font-size="62.484px"
+     font-weight="400"
+     font-style="normal"
+     id="g14"
+     style="fill-rule:evenodd"
+     transform="translate(0,-310.69765)">
+    <text
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       xml:space="preserve"
+       x="712"
+       y="363"
+       font-family="Arial"
+       font-size="62.484"
+       font-weight="400"
+       font-style="normal"
+       id="text13"
+       style="font-size:63.5px">R<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1">F</tspan></text>
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g15"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)" />
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-linejoin="bevel"
+     font-family="Arial"
+     font-size="62.484px"
+     font-weight="400"
+     font-style="normal"
+     id="g16"
+     style="fill-rule:evenodd"
+     transform="translate(-9.9154447,-289.53099)">
+    <text
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       xml:space="preserve"
+       x="356"
+       y="515"
+       font-family="Arial"
+       font-size="62.484"
+       font-weight="400"
+       font-style="normal"
+       id="text15"
+       style="font-size:63.5px">L</text>
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g17"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)" />
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g18"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 661,386 h 152 v 41 H 661 v -41"
+       id="path17" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g19"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="610,407 661,407 "
+       id="polyline18" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g20"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="864,407 813,407 "
+       id="polyline19" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g21"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 77,584 26,559 51,534 77,584"
+       id="path20" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g22"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 102,564 c 0,-10 10,-25 26,-25"
+       id="path21" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g23"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 153,564 c 0,-10 -15,-25 -25,-25"
+       id="path22" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g24"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 153,564 c 0,15 10,25 25,25"
+       id="path23" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g25"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 204,564 c 0,15 -15,25 -26,25"
+       id="path24" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g26"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="102,610 77,584 "
+       id="polyline25" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-linejoin="bevel"
+     font-family="Arial"
+     font-size="41.656px"
+     font-weight="400"
+     font-style="normal"
+     id="g27"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <text
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       xml:space="preserve"
+       x="45"
+       y="499"
+       font-family="Arial"
+       font-size="41.656"
+       font-weight="400"
+       font-style="normal"
+       id="text26"
+       style="font-size:63.5px">V<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan53">in</tspan></text>
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g28"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)" />
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g29"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 1144,737 -51,-26 25,-25 26,51"
+       id="path28" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g30"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="1103,696 1067,661 "
+       id="polyline29" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-linejoin="bevel"
+     font-family="Arial"
+     font-size="41.656px"
+     font-weight="400"
+     font-style="normal"
+     id="g31"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <text
+       fill="#000000"
+       fill-opacity="1"
+       stroke="none"
+       xml:space="preserve"
+       x="1169"
+       y="753"
+       font-family="Arial"
+       font-size="41.656"
+       font-weight="400"
+       font-style="normal"
+       id="text30"
+       style="font-size:63.5px">V<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan52">out</tspan></text>
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g32"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)" />
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g33"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="M 661,788 V 534 L 864,661 661,788"
+       id="path32" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g34"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="686,610 717,610 "
+       id="polyline33" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g35"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="686,711 717,711 "
+       id="polyline34" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g36"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="702,727 702,696 "
+       id="polyline35" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g37"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="559,711 661,711 "
+       id="polyline36" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g38"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="559,610 661,610 "
+       id="polyline37" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g39"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="966,661 864,661 "
+       id="polyline38" />
+  </g>
+  <g
+     fill="#000000"
+     fill-opacity="1"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g40"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 925,661 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.523 4.477,-10 10,-10 5.523,0 10,4.477 10,10"
+       id="path39" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g41"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 255,610 c 0,-26 15,-51 25,-51"
+       id="path40" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g42"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 305,610 c 0,-26 -10,-51 -25,-51"
+       id="path41" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g43"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 305,610 c 0,-26 16,-51 26,-51"
+       id="path42" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g44"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 356,610 c 0,-26 -10,-51 -25,-51"
+       id="path43" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g45"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 356,610 c 0,-26 10,-51 26,-51"
+       id="path44" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g46"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 407,610 c 0,-26 -15,-51 -25,-51"
+       id="path45" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g47"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 407,610 c 0,-26 10,-51 25,-51"
+       id="path46" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g48"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 458,610 c 0,-26 -15,-51 -26,-51"
+       id="path47" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g49"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="204,610 255,610 "
+       id="polyline48" />
+  </g>
+  <g
+     fill="none"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g50"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <polyline
+       fill="none"
+       vector-effect="none"
+       points="509,610 458,610 "
+       id="polyline49" />
+  </g>
+  <g
+     fill="#000000"
+     fill-opacity="1"
+     stroke="#000000"
+     stroke-opacity="1"
+     stroke-width="8"
+     stroke-linecap="round"
+     stroke-linejoin="bevel"
+     font-family="'MS Shell Dlg 2'"
+     font-size="52.9167px"
+     font-weight="400"
+     font-style="normal"
+     id="g51"
+     style="fill-rule:evenodd"
+     transform="translate(0,-289.53099)">
+    <path
+       vector-effect="none"
+       fill-rule="evenodd"
+       d="m 569,610 c 0,5.523 -4.477,10 -10,10 -5.523,0 -10,-4.477 -10,-10 0,-5.523 4.477,-10 10,-10 5.523,0 10,4.477 10,10"
+       id="path50" />
+  </g>
+</svg>
