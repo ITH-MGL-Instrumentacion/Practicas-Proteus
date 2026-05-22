@@ -5,13 +5,15 @@
   - [Archivos de la práctica](#archivos-de-la-práctica)
   - [¿Qué hace el código?](#qué-hace-el-código)
 - [Ejercicios adicionales](#ejercicios-adicionales)
+  - [1. Cambia el tiempo de encendido y apagado para modificar la velocidad de parpadeo.](#1-cambia-el-tiempo-de-encendido-y-apagado-para-modificar-la-velocidad-de-parpadeo)
+  - [2. Añade otro LED en el pin digital `5` y haz que parpadee con un patrón distinto al del pin `3`.](#2-añade-otro-led-en-el-pin-digital-5-y-haz-que-parpadee-con-un-patrón-distinto-al-del-pin-3)
 
 ## ¿Qué es una salida digital?
 
 Una salida digital en Arduino permite poner un pin en dos estados:
 
-- `HIGH` (nivel alto, típicamente 5V en Arduino UNO)
-- `LOW` (nivel bajo, 0V)
+- `HIGH` (nivel alto, típicamente 5 V en Arduino UNO)
+- `LOW` (nivel bajo, 0 V)
 
 Con esto se puede controlar dispositivos sencillos como LEDs, relevadores o señales lógicas para otros circuitos.
 
@@ -91,4 +93,4 @@ void loop() {
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Formato de los proyectos en Visual Studio Code](../0_Introduccion/Formato_proyectos.md) | [Volver al índice](../README.md#prácticas-básicas) | [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) |
+| [Formato de los proyectos en Visual Studio Code](../0_Introduccion/Formato_proyectos.md) | [Volver al índice](../README.md) | [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) |

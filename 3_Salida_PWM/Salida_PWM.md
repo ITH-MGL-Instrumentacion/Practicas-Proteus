@@ -176,4 +176,4 @@ Funciones extra importantes en este ejercicio:
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) | [Volver al índice](../README.md#prácticas-básicas) | [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) |
+| [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) | [Volver al índice](../README.md) | [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) |

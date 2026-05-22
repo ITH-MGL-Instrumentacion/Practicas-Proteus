@@ -29,11 +29,8 @@ Estas prácticas están enfocadas en entender cómo las señales pasan de ser an
 
 ### Convertidor digital - analógico
 
-6. [CDA por suma ponderada](6_CDA_suma_ponderada\CDA_suma_ponderada.md): Convertidor digital analógico usando el método poco óptimo pero intuitivo de la suma ponderada.
-7. [CDA R-2R](7_CDA_R_2R\CDA_R_2R.md): Convertidor digital analógico usando el método optimizado para el código binario.
+6. [DAC](6_DAC\DAC.md): Se explican 3 tipos de Convertidores digital-analógico y la práctica en protoboard es el DAC R-2R.
 
 ### Convertidor analógico - digital
 
-8. [CAD flash](8_CAD_flash\CAD_flash.md): Convertidor analógico digital usando comparadores en paralelo.
-9. [CAD SAR](9_CAD_SAR\CAD_SAR.md): Convertidor analógico digital usando el método de aproximaciones sucesivas buscando si es mayor o menor.
-10. [CAD rampa](10_CAD_rampa\CAD_rampa.md): Convertidor analógico digital usando una rampa de voltaje y un comparador para calcular el tiempo.
+7. [ADC](7_ADC\ADC.md): Convertidor analógico-digital por seguimiento con el DAC R-2R.
