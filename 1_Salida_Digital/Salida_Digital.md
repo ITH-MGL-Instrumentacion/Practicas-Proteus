@@ -12,8 +12,8 @@
 
 Una salida digital en Arduino permite poner un pin en dos estados:
 
-- `HIGH` (nivel alto, típicamente 5V en Arduino UNO)
-- `LOW` (nivel bajo, 0V)
+- `HIGH` (nivel alto, típicamente 5 V en Arduino UNO)
+- `LOW` (nivel bajo, 0 V)
 
 Con esto se puede controlar dispositivos sencillos como LEDs, relevadores o señales lógicas para otros circuitos.
 
