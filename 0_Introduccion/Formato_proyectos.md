@@ -1,4 +1,8 @@
-<h1>Formato de los proyectos en Visual Studio Code</h1>
+# Formato de los proyectos en Visual Studio Code
+
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Introducción a Proteus](Introduccion_Proteus.md) | [Volver al índice](../README.md) | [Salida digital](../1_Salida_Digital/Salida_Digital.md) |
 
 - [Objetivo](#objetivo)
 - [Estructura general del repositorio](#estructura-general-del-repositorio)

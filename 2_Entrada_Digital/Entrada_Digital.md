@@ -1,12 +1,17 @@
-<h1>Entrada digital con Arduino</h1>
+# Entrada digital con Arduino
 
-- [¿Qué es una entrada digital?](#qué-es-una-entrada-digital)
-- [Práctica: botón en pin 2 y LED en pin 3](#práctica-botón-en-pin-2-y-led-en-pin-3)
-  - [Archivo de la práctica](#archivo-de-la-práctica)
-  - [¿Qué hace el código?](#qué-hace-el-código)
-- [Ejercicios adicionales](#ejercicios-adicionales)
-  - [1. Haz que el LED se encienda al presionar el botón y se mantenga prendido. Luego que se apague al volver a presionarlo.](#1-haz-que-el-led-se-encienda-al-presionar-el-botón-y-se-mantenga-prendido-luego-que-se-apague-al-volver-a-presionarlo)
-  - [2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.](#2-añade-otro-botón-en-el-pin-digital-4-y-un-led-en-el-pin-digital-5)
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Salida digital](../1_Salida_Digital/Salida_Digital.md) | [Volver al índice](../README.md) | [Salida "analógica" (PWM)](../3_Salida_PWM/Salida_PWM.md) |
+
+- [Entrada digital con Arduino](#entrada-digital-con-arduino)
+  - [¿Qué es una entrada digital?](#qué-es-una-entrada-digital)
+  - [Práctica: botón en pin 2 y LED en pin 3](#práctica-botón-en-pin-2-y-led-en-pin-3)
+    - [Archivo de la práctica](#archivo-de-la-práctica)
+    - [¿Qué hace el código?](#qué-hace-el-código)
+  - [Ejercicios adicionales](#ejercicios-adicionales)
+    - [1. Haz que el LED se encienda al presionar el botón y se mantenga prendido. Luego que se apague al volver a presionarlo.](#1-haz-que-el-led-se-encienda-al-presionar-el-botón-y-se-mantenga-prendido-luego-que-se-apague-al-volver-a-presionarlo)
+    - [2. Añade otro botón en el pin digital `4` y un LED en el pin digital `5`.](#2-añade-otro-botón-en-el-pin-digital-4-y-un-led-en-el-pin-digital-5)
 
 ## ¿Qué es una entrada digital?
 

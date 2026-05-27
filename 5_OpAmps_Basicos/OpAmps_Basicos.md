@@ -1,38 +1,43 @@
-<h1>Amplificadores operacionales básicos</h1>
+# Amplificadores operacionales básicos
 
 Esta sección es más técnica que las anteriores, ya que tiene como objetivo entender las configuraciones básicas de un amplificador operacional. En este caso, no se programará nada en Arduino, pero sí se realizarán cambios en las resistencias para entender las ecuaciones matemáticas.
 
 > Subirán los **videos** de cada archivo de Proteus resolviendo las preguntas y explicando el funcionamiento de los problemas resueltos.
 
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_DAC/DAC.md) |
+
 <h2>Índice</h2>
 
-- [Archivos](#archivos)
-- [Tipos de circuitos integrados](#tipos-de-circuitos-integrados)
-  - [1. LM741 (Obsoleto)](#1-lm741-obsoleto)
-  - [2. LM358 y LM324 (Uso general)](#2-lm358-y-lm324-uso-general)
-  - [3. LM339 y LM393 (Especialistas en comparar)](#3-lm339-y-lm393-especialistas-en-comparar)
-  - [4. TL081 y TL082](#4-tl081-y-tl082)
-- [Aplicaciones clásicas](#aplicaciones-clásicas)
-  - [1. Básicos](#1-básicos)
-    - [1.1. Comparador](#11-comparador)
-    - [1.2. Seguidor de voltaje](#12-seguidor-de-voltaje)
-    - [Prueba sugerida](#prueba-sugerida)
-  - [2. Amplificadores](#2-amplificadores)
-    - [2.1. Amplificador inversor](#21-amplificador-inversor)
-    - [Ejercicio](#ejercicio)
-    - [2.2. Amplificador No inversor](#22-amplificador-no-inversor)
-  - [3. Amplificador sumador/restador](#3-amplificador-sumadorrestador)
-    - [3.1. Amplificador sumador inversor](#31-amplificador-sumador-inversor)
-    - [3.2. Amplificador sumador no inversor](#32-amplificador-sumador-no-inversor)
-    - [3.3. Amplificador sumador restador](#33-amplificador-sumador-restador)
-    - [Ejercicio](#ejercicio-1)
-  - [4. Filtros (Derivador e integrador)](#4-filtros-derivador-e-integrador)
-    - [4.1. Integrador (filtro pasa bajas)](#41-integrador-filtro-pasa-bajas)
-    - [4.1. Ejercicios](#41-ejercicios)
-    - [4.2. Derivador (filtro pasa altas)](#42-derivador-filtro-pasa-altas)
-    - [4.2. Ejercicios](#42-ejercicios)
-    - [4.3. Derivador-Integrador (Filtro pasa banda)](#43-derivador-integrador-filtro-pasa-banda)
-    - [4.3. Ejercicios](#43-ejercicios)
+- [Amplificadores operacionales básicos](#amplificadores-operacionales-básicos)
+  - [Archivos](#archivos)
+  - [Tipos de circuitos integrados](#tipos-de-circuitos-integrados)
+    - [1. LM741 (Obsoleto)](#1-lm741-obsoleto)
+    - [2. LM358 y LM324 (Uso general)](#2-lm358-y-lm324-uso-general)
+    - [3. LM339 y LM393 (Especialistas en comparar)](#3-lm339-y-lm393-especialistas-en-comparar)
+    - [4. TL081 y TL082](#4-tl081-y-tl082)
+  - [Aplicaciones clásicas](#aplicaciones-clásicas)
+    - [1. Básicos](#1-básicos)
+      - [1.1. Comparador](#11-comparador)
+      - [1.2. Seguidor de voltaje](#12-seguidor-de-voltaje)
+      - [Prueba sugerida](#prueba-sugerida)
+    - [2. Amplificadores](#2-amplificadores)
+      - [2.1. Amplificador inversor](#21-amplificador-inversor)
+      - [Ejercicio](#ejercicio)
+      - [2.2. Amplificador No inversor](#22-amplificador-no-inversor)
+    - [3. Amplificador sumador/restador](#3-amplificador-sumadorrestador)
+      - [3.1. Amplificador sumador inversor](#31-amplificador-sumador-inversor)
+      - [3.2. Amplificador sumador no inversor](#32-amplificador-sumador-no-inversor)
+      - [3.3. Amplificador sumador restador](#33-amplificador-sumador-restador)
+      - [Ejercicio](#ejercicio-1)
+    - [4. Filtros (Derivador e integrador)](#4-filtros-derivador-e-integrador)
+      - [4.1. Integrador (filtro pasa bajas)](#41-integrador-filtro-pasa-bajas)
+      - [4.1. Ejercicios](#41-ejercicios)
+      - [4.2. Derivador (filtro pasa altas)](#42-derivador-filtro-pasa-altas)
+      - [4.2. Ejercicios](#42-ejercicios)
+      - [4.3. Derivador-Integrador (Filtro pasa banda)](#43-derivador-integrador-filtro-pasa-banda)
+      - [4.3. Ejercicios](#43-ejercicios)
 
 
 ## Archivos
@@ -176,7 +181,7 @@ Se recomienda que cada entrada pase por un seguidor o buffer, ya que al tener un
 
 El caso general es el Amplificador sumador-restador que se muestra en la siguiente imagen, pero se irán viendo casos más específicos y útiles. 
 
-![Imagen de amplificador sumador restador](img/OpAmp_Sumador_restador.svg)
+![Imagen de amplificador sumador restador](img/OpAmp_Sumador_restador.SVG)
 
 Para un circuito sumador/restador con múltiples entradas ponderadas:
 
@@ -218,7 +223,7 @@ $$R_P = R_1||R_2||\cdots||R_n$$
 
 Es la versión completa de los casos anteriores.
 
-![Imagen de OpAmp Sumador restador](img/OpAmp_Sumador_restador.svg)
+![Imagen de OpAmp Sumador restador](img/OpAmp_Sumador_restador.SVG)
 
 Para un circuito sumador/restador con múltiples entradas ponderadas:
 
@@ -262,7 +267,7 @@ Se les dice filtros porque amplifican o atenúan el voltaje dependiendo de qué 
 #### 4.1. Integrador (filtro pasa bajas)
 Realiza la operación matemática de integración. Es decir, el voltaje de salida es la integral del voltaje de entrada. Usualmente, se representa con una bobina porque almacena voltaje en forma de campo eléctrico.
 
-[![OpAmp Integrador](img/OpAmp_integrador_bobina.SVG)](img/OpAmp_integrador_bobina.SVG)
+[![OpAmp Integrador](img/OpAmp_integrador_bobina.SVG)](img/OpAmp_integrador_bobina.svg)
 
 En este caso, el voltaje resultante se obtiene con la ecuación:
 
@@ -274,7 +279,7 @@ Donde $k$ representa la condición inicial del voltaje almacenado en forma de ca
 
 El inconveniente de las bobinas es que es difícil miniaturizarlas para ponerlas en circuitos integrados. Además, el campo magnético puede influir en otras partes del circuito, por lo que normalmente se usan condensadores con la siguiente configuración:
 
-[![OpAmp Integrador](img/OpAmp_integrador_1.SVG)](img/OpAmp_integrador_1.SVG)
+[![OpAmp Integrador](img/OpAmp_integrador_1.SVG)](img/OpAmp_integrador_1.svg)
 
 Cuya ecuación es:
 
@@ -468,11 +473,11 @@ En la página de [Wilaeba Electrónica](https://wilaebaelectronica.blogspot.com/
 
 Como su nombre lo indica, combina las características de ambos filtros, lo que permite dejar pasar solo frecuencias que se encuentran entre las frecuencias de corte elegidas. Hay un circuito que se puede hacer usando un solo amplificador operacional, pero también se pueden combinar los dos.
 
-![Filtro pasa banda](img\Ganancia_Filtro_Pasa_banda.png)
+![Filtro pasa banda](img/Ganancia_Filtro_Pasa_banda.png)
 
 #### 4.3. Ejercicios
 - Combina los dos filtros y verifica que deja pasar las frecuencias entre 490 y 980 Hz.
 
 | Anterior | Índice | Siguiente |
 |---|---|---|
-| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_ADC_suma_ponderada/ADC_suma_ponderada.md) |
+| [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) | [Volver al índice](../README.md#prácticas-usando-amplificadores-operacionales) | [ADC por suma ponderada](../6_DAC/DAC.md) |
