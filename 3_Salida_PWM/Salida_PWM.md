@@ -1,13 +1,18 @@
-<h1>Salida PWM con Arduino</h1>
+# Salida PWM con Arduino
 
-- [¿Qué es una salida PWM?](#qué-es-una-salida-pwm)
-- [Práctica: LED con PWM fijo al 50% en el pin 3](#práctica-led-con-pwm-fijo-al-50-en-el-pin-3)
-  - [Archivo de la práctica](#archivo-de-la-práctica)
-  - [¿Qué hace el código?](#qué-hace-el-código)
-  - [Funciones clave que debes entender](#funciones-clave-que-debes-entender)
-- [Ejercicios adicionales](#ejercicios-adicionales)
-  - [1. Selecciona 5 valores PWM: 0%, 25%, 50%, 75% y 100% y haz que vayan cambiando en un intervalo de tiempo.](#1-selecciona-5-valores-pwm-0-25-50-75-y-100-y-haz-que-vayan-cambiando-en-un-intervalo-de-tiempo)
-  - [2. Haz que ahora use una función seno con un periodo de 1 segundo para cambiar la iluminación del LED.](#2-haz-que-ahora-use-una-función-seno-con-un-periodo-de-1-segundo-para-cambiar-la-iluminación-del-led)
+| Anterior | Índice | Siguiente |
+|---|---|---|
+| [Entrada digital](../2_Entrada_Digital/Entrada_Digital.md) | [Volver al índice](../README.md) | [Entrada analógica](../4_Entrada_Analogica/Entrada_Analogica.md) |
+
+- [Salida PWM con Arduino](#salida-pwm-con-arduino)
+  - [¿Qué es una salida PWM?](#qué-es-una-salida-pwm)
+  - [Práctica: LED con PWM fijo al 50% en el pin 3](#práctica-led-con-pwm-fijo-al-50-en-el-pin-3)
+    - [Archivo de la práctica](#archivo-de-la-práctica)
+    - [¿Qué hace el código?](#qué-hace-el-código)
+    - [Funciones clave que debes entender](#funciones-clave-que-debes-entender)
+  - [Ejercicios adicionales](#ejercicios-adicionales)
+    - [1. Selecciona 5 valores PWM: 0%, 25%, 50%, 75% y 100% y haz que vayan cambiando en un intervalo de tiempo.](#1-selecciona-5-valores-pwm-0-25-50-75-y-100-y-haz-que-vayan-cambiando-en-un-intervalo-de-tiempo)
+    - [2. Haz que ahora use una función seno con un periodo de 1 segundo para cambiar la iluminación del LED.](#2-haz-que-ahora-use-una-función-seno-con-un-periodo-de-1-segundo-para-cambiar-la-iluminación-del-led)
 
 ## ¿Qué es una salida PWM?
 
