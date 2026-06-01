@@ -18,13 +18,13 @@ TMAX_C = 50.0
 
 # R_EQ: resistencia fija de referencia del puente. 
 # Se elige para que el punto de equilibrio quede dentro del rango util del ADC.
-R_EQ = 5.6e3
+R_EQ = 10e3
 
 # Ventana util deseada a la salida del amplificador para usar la referencia interna de 1.1 V.
 # VOUT_MIN: voltaje minimo objetivo a la salida del amplificador dentro del rango util.
 VOUT_MIN = 0.10
 # VOUT_MAX: voltaje maximo objetivo a la salida del amplificador dentro del rango util.
-VOUT_MAX = 1.00
+VOUT_MAX = 3.2
 
 
 def ntc_resistance_beta(temp_c: float, r0: float = R0, beta: float = BETA, t0_c: float = T0_C) -> float:
@@ -107,9 +107,19 @@ def main() -> None:
     print(f"Con ese puente: Vbridge(Teq ) = {vb_eq:.6f} V")
     print(f"Con ese puente: Vbridge(Tmax) = {vb_max:.6f} V")
     print()
+    # Voltajes de salida del amplificador con offset = 0 (solo ganancia aplicada).
+    # Estos son los valores que se leen durante la calibracion antes de ajustar el trimmer de offset.
+    vout_max_sin_offset = gain * vb_max   # con R(Tmax) conectada, offset = 0
+    vout_min_sin_offset = gain * vb_min   # con R(Tmin) conectada, offset = 0
+    span_calibracion = vout_max_sin_offset - vout_min_sin_offset
     print(f"Ganancia inicial sugerida: G = {gain:.4f}")
     print(f"Referencia de salida sugerida: Vref = {vref:.6f} V")
     print(f"Salida en equilibrio con ese Vref: Vout_eq = {vout_eq:.6f} V")
+    print()
+    print("Voltajes de calibracion (offset = 0, solo ganancia):")
+    print(f"  Vout con R(Tmax) = {r_max:.1f} ohm (offset=0): {vout_max_sin_offset:+.4f} V")
+    print(f"  Vout con R(Tmin) = {r_min:.1f} ohm (offset=0): {vout_min_sin_offset:+.4f} V")
+    print(f"  Diferencia (span de calibracion): {span_calibracion:.4f} V")
     print()
 
     # Mostrar la diferencia entre cero del puente y cero de salida.
@@ -124,7 +134,6 @@ def main() -> None:
     print("Interpretacion:")
     print("  - Vbridge = 0 fija el equilibrio del puente.")
     print("  - Vout = 0 depende ademas de la referencia Vref y de la ganancia.")
-    print("  - Si se usa un margen util como 0.10 V a 1.00 V, el cero fisico del puente no tiene por que coincidir con 0 V a la salida.")
 
 
 if __name__ == "__main__":
