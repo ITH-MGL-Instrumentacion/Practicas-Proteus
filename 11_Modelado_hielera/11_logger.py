@@ -5,17 +5,31 @@ import time
 # ---------------------------------------------------------------------------
 # Configuración
 # ---------------------------------------------------------------------------
-PUERTO_COM     = 'COM2'               # Puerto del COMPIM de Proteus o Arduino físico
+PUERTO_COM     = 'COM6'               # Puerto del COMPIM de Proteus o Arduino físico
 BAUDIOS        = 9600
 ARCHIVO_SALIDA = 'datos_hielera.csv'
 TIMEOUT_SILENCIO_S = 30              # Segundos sin datos antes de cerrar solo
+PUERTO_ESPERA_MAX_S = 10             # Segundos máximos para esperar al puerto serie
+REINTENTO_PUERTO_S = 0.5             # Intervalo entre intentos de apertura
 
 # ---------------------------------------------------------------------------
 # Conexión
 # ---------------------------------------------------------------------------
+
+def abrir_puerto(com, baud, timeout_s=10, reintento_s=0.5, espera_max_s=10):
+    inicio = time.time()
+    while True:
+        try:
+            puerto = serial.Serial(com, baud, timeout=timeout_s)
+            return puerto
+        except serial.SerialException:
+            if time.time() - inicio >= espera_max_s:
+                raise
+            time.sleep(reintento_s)
+
 print(f"Conectando al puerto {PUERTO_COM}...")
 try:
-    ser = serial.Serial(PUERTO_COM, BAUDIOS, timeout=1)
+    ser = abrir_puerto(PUERTO_COM, BAUDIOS, timeout_s=10, reintento_s=REINTENTO_PUERTO_S, espera_max_s=PUERTO_ESPERA_MAX_S)
     time.sleep(2)  # Esperar inicialización del Arduino
     print(f"Conectado. Guardando en '{ARCHIVO_SALIDA}'...")
     print("Presiona Ctrl+C para detener manualmente.\n")

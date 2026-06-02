@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 // Pines
 // ---------------------------------------------------------------------------
-const int PIN_SENSOR    = A0;  // Sensor de temperatura del OVEN (10 mV/°C)
+const int PIN_SENSOR    = A0;  // Entrada del divisor de voltaje del NTC 10k B3950
 const int PIN_MOSFET    = 3;   // Salida PWM hacia el IRLZ44N
 const int PIN_VENTILADOR = 5;  // Ventilador (hardware real — ignorado en Proteus)
 
@@ -14,6 +14,15 @@ const float TIEMPO_ESCALON_S   = 5.0;    // Segundos hasta aplicar el escalón
 const float TIEMPO_MAX_S       = 900.0;  // Tiempo máximo del experimento (seg) — 15 min
 const float TEMP_MAX_C         = 85.0;   // Temperatura de corte de seguridad (poliestirenо ~80 °C)
 const int   PWM_ESCALON        = 128;    // Escalón al 50 % (128/255) — seguro para la hielera
+
+// ---------------------------------------------------------------------------
+// NTC 10k B3950
+// ---------------------------------------------------------------------------
+const float NTC_R0      = 10000.0; // Resistencia a 25 °C
+const float NTC_B       = 3950.0;  // Coeficiente B del termistor
+const float NTC_T0_K    = 298.15;  // 25 °C en Kelvin
+const float R_REF       = 10000.0; // Resistencia fija del divisor de voltaje
+const float VCC         = 5.0;     // Voltaje de referencia del divisor
 
 // Detección de estado estacionario
 // Ventana más larga y umbral más bajo: la curva a 50 % PWM sube muy despacio
@@ -76,10 +85,12 @@ void loop() {
   unsigned long tiempoActualMs = millis() - tiempoInicio;
   float tiempoSegundos = tiempoActualMs / 1000.0;
 
-  // Leer temperatura del OVEN (10 mV/°C, referencia 5 V)
-  int   lecturaADC  = analogRead(PIN_SENSOR);
-  float voltajemV   = (lecturaADC * 5000.0) / 1023.0;
-  float temperaturaC = voltajemV / 10.0;
+  // Leer temperatura desde el NTC 10k B3950 en un divisor de voltaje con R_REF
+  int lecturaADC = analogRead(PIN_SENSOR);
+  float voltajeV = (lecturaADC * VCC) / 1023.0;
+  float rNTC = R_REF * (VCC / voltajeV - 1.0);
+  float tempK = 1.0 / ((1.0 / NTC_T0_K) + (log(rNTC / NTC_R0) / NTC_B));
+  float temperaturaC = tempK - 273.15;
 
   // --- Corte por temperatura máxima ---
   if (temperaturaC >= TEMP_MAX_C) {
