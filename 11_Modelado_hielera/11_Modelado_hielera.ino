@@ -1,28 +1,44 @@
 #include <Arduino.h>
+#include <DHT.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// --- Configuración LCD ---
+LiquidCrystal_I2C lcd(0x27, 16, 2); 
+
+// --- Configuración Sensor de Humedad ---
+const int PIN_DHT = 2;
+#define DHTTYPE DHT22   // Cambiar a DHT11 si tu sensor físico es el azul
+DHT dht(PIN_DHT, DHTTYPE);
 
 // ---------------------------------------------------------------------------
-// Pines
+// Pines de Hardware
 // ---------------------------------------------------------------------------
-const int PIN_SENSOR    = A0;  // Sensor de temperatura del OVEN (10 mV/°C)
-const int PIN_MOSFET    = 3;   // Salida PWM hacia el IRLZ44N
-const int PIN_VENTILADOR = 5;  // Ventilador (hardware real — ignorado en Proteus)
+const int PIN_SENSOR     = A0;  // Termistor NTC 10k
+const int PIN_FOCO       = 3;   // Relevador del foco (Lógica Invertida)
+const int PIN_VENTILADOR = 5;   // Relevador del ventilador (Lógica Invertida)
 
 // ---------------------------------------------------------------------------
-// Parámetros del experimento
+// Parámetros del Termistor NTC 10k B3950
 // ---------------------------------------------------------------------------
-const float TIEMPO_ESCALON_S   = 5.0;    // Segundos hasta aplicar el escalón
-const float TIEMPO_MAX_S       = 900.0;  // Tiempo máximo del experimento (seg) — 15 min
-const float TEMP_MAX_C         = 85.0;   // Temperatura de corte de seguridad (poliestirenо ~80 °C)
-const int   PWM_ESCALON        = 128;    // Escalón al 50 % (128/255) — seguro para la hielera
-
-// Detección de estado estacionario
-// Ventana más larga y umbral más bajo: la curva a 50 % PWM sube muy despacio
-// cerca del régimen permanente y 5 s no es suficiente para decidir.
-const int   VENTANA_SS  = 150;    // 150 muestras × 100 ms = 15 s de ventana
-const float UMBRAL_SS   = 0.15;   // Variación máxima tolerable en la ventana (°C)
+const float R_SERIE           = 10000.0; 
+const float TERMISTOR_NOMINAL = 10000.0; 
+const float TEMP_NOMINAL      = 25.0;    
+const float B_COEFICIENTE     = 3950.0;  
 
 // ---------------------------------------------------------------------------
-// Variables de estado
+// Parámetros del Experimento (Respuesta al Escalón)
+// ---------------------------------------------------------------------------
+const float TIEMPO_ESCALON_S   = 5.0;   
+const float TIEMPO_MAX_S       = 900.0; 
+const float TEMP_MAX_C         = 85.0;  
+
+// Detección de Estado Estacionario
+const int   VENTANA_SS         = 150;   
+const float UMBRAL_SS          = 0.15;  
+
+// ---------------------------------------------------------------------------
+// Variables de Estado y Temporizadores
 // ---------------------------------------------------------------------------
 unsigned long tiempoInicio = 0;
 bool escalonAplicado = false;
@@ -32,26 +48,48 @@ float bufferTemp[VENTANA_SS];
 int   indiceBuffer = 0;
 bool  bufferLleno  = false;
 
-void setup() {
-  pinMode(PIN_MOSFET, OUTPUT);
-  analogWrite(PIN_MOSFET, 0);
+unsigned long tiempoUltimaLCD = 0;
+unsigned long tiempoUltimoDHT = 0; // Temporizador para no saturar el DHT22
+float humedadActual = 0.0;         // Almacena la última humedad válida
 
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("Iniciando OVEN...");
+
+  dht.begin();
+
+  // Configuración del Foco (Inicia APAGADO con HIGH por lógica invertida)
+  pinMode(PIN_FOCO, OUTPUT);
+  digitalWrite(PIN_FOCO, HIGH); 
+  
+  // Configuración del Ventilador 
   pinMode(PIN_VENTILADOR, OUTPUT);
-  analogWrite(PIN_VENTILADOR, 255);  // Ventilador al máximo desde el inicio
+  // Se envía LOW para activar el relevador de lógica invertida desde el inicio
+  digitalWrite(PIN_VENTILADOR, LOW); 
 
   Serial.begin(9600);
-  Serial.println("Tiempo_s,Temperatura_C,Entrada_PWM");
+  Serial.println("Tiempo_s,Temperatura_C,Humedad_%,Estado_Foco");
 
-  // Inicializar buffer de estado estacionario
   for (int i = 0; i < VENTANA_SS; i++) bufferTemp[i] = 0.0;
-
+  
   tiempoInicio = millis();
 }
 
 void apagarYTerminar(const char* motivo) {
-  analogWrite(PIN_MOSFET, 0);
-  analogWrite(PIN_VENTILADOR, 0);  // Apagar ventilador al terminar
+  // Estado de seguridad (Ambos relevadores apagados con HIGH)
+  digitalWrite(PIN_FOCO, HIGH);       
+  digitalWrite(PIN_VENTILADOR, HIGH);  
+  
   experimentoTerminado = true;
+  
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("FIN EXPERIMENTO");
+  lcd.setCursor(0, 1);
+  lcd.print(motivo);
+  
   Serial.print("FIN,");
   Serial.println(motivo);
 }
@@ -76,45 +114,78 @@ void loop() {
   unsigned long tiempoActualMs = millis() - tiempoInicio;
   float tiempoSegundos = tiempoActualMs / 1000.0;
 
-  // Leer temperatura del OVEN (10 mV/°C, referencia 5 V)
-  int   lecturaADC  = analogRead(PIN_SENSOR);
-  float voltajemV   = (lecturaADC * 5000.0) / 1023.0;
-  float temperaturaC = voltajemV / 10.0;
+  // --- 1. Procesamiento matemático del Termistor NTC (Cada 100ms) ---
+  int lecturaADC = analogRead(PIN_SENSOR);
+  if (lecturaADC == 0) lecturaADC = 1; 
+  if (lecturaADC == 1023) lecturaADC = 1022;
 
-  // --- Corte por temperatura máxima ---
-  if (temperaturaC >= TEMP_MAX_C) {
-    apagarYTerminar("TEMP_MAX");
+  float resistenciaNTC = R_SERIE * ((float)lecturaADC / (1023.0 - lecturaADC));
+  float temperaturaC = resistenciaNTC / TERMISTOR_NOMINAL;     
+  temperaturaC = log(temperaturaC);                            
+  temperaturaC /= B_COEFICIENTE;                               
+  temperaturaC += 1.0 / (TEMP_NOMINAL + 273.15);               
+  temperaturaC = 1.0 / temperaturaC;                           
+  temperaturaC -= 273.15;                                      
+
+  // --- 2. Lectura Protegida del DHT22 (Solo cada 2000ms) ---
+  if (millis() - tiempoUltimoDHT >= 2000) {
+    float lecturaHumedad = dht.readHumidity();
+    if (!isnan(lecturaHumedad)) {
+      humedadActual = lecturaHumedad; 
+    }
+    tiempoUltimoDHT = millis();
+  }
+
+  // --- 3. Límites de Control de Seguridad ---
+  if (temperaturaC >= TEMP_MAX_C || tiempoSegundos >= TIEMPO_MAX_S) {
+    apagarYTerminar(temperaturaC >= TEMP_MAX_C ? "TEMP_MAX" : "TIEMPO_MAX");
     return;
   }
 
-  // --- Corte por tiempo máximo ---
-  if (tiempoSegundos >= TIEMPO_MAX_S) {
-    apagarYTerminar("TIEMPO_MAX");
-    return;
-  }
-
-  // --- Aplicar escalón ---
-  int pwmActual = 0;
+  // --- 4. Aplicación del Escalón ---
+  bool logicaFocoDeseada = false; 
   if (tiempoSegundos >= TIEMPO_ESCALON_S) {
-    pwmActual = PWM_ESCALON;
+    logicaFocoDeseada = true; 
     if (!escalonAplicado) escalonAplicado = true;
   }
-  analogWrite(PIN_MOSFET, pwmActual);
+  
+  // Control físico del Foco (LOW = Encendido, HIGH = Apagado)
+  digitalWrite(PIN_FOCO, logicaFocoDeseada ? LOW : HIGH);
 
-  // --- Detección de estado estacionario (solo tras el escalón) ---
+  // --- 5. Interfaz Visual LCD (Cada 500ms) ---
+  if (millis() - tiempoUltimaLCD >= 500) {
+    lcd.setCursor(0, 0);
+    lcd.print("T: "); lcd.print(temperaturaC, 1); lcd.print("C ");
+    
+    if (humedadActual > 0.0) {
+      lcd.print("H: "); lcd.print(humedadActual, 0); lcd.print("%");
+    } else {
+      lcd.print("H:--%");
+    }
+    
+    lcd.setCursor(0, 1);
+    lcd.print("Foco: "); 
+    lcd.print(logicaFocoDeseada ? "ON (CONST) " : "OFF        ");
+    tiempoUltimaLCD = millis();
+  }
+
+  // --- 6. Monitoreo de Estado Estacionario ---
   if (escalonAplicado && estadoEstacionario(temperaturaC)) {
-    // Enviar la muestra actual antes de terminar
     Serial.print(tiempoSegundos, 2); Serial.print(",");
     Serial.print(temperaturaC, 2);   Serial.print(",");
-    Serial.println(pwmActual);
+    Serial.print(humedadActual, 1);  Serial.print(",");
+    Serial.println(logicaFocoDeseada ? 1 : 0);
+    
     apagarYTerminar("ESTADO_ESTACIONARIO");
     return;
   }
 
-  // --- Enviar muestra en formato CSV ---
+  // --- 7. Envío de Datos por Puerto Serie ---
   Serial.print(tiempoSegundos, 2); Serial.print(",");
   Serial.print(temperaturaC, 2);   Serial.print(",");
-  Serial.println(pwmActual);
+  Serial.print(humedadActual, 1);  Serial.print(",");
+  Serial.println(logicaFocoDeseada ? 1 : 0); 
 
-  delay(100); // Muestreo cada 100 ms
+  delay(100); 
 }
+// === FIN DEL CODIGO (ASEGURATE DE COPIAR HASTA AQUI) ===

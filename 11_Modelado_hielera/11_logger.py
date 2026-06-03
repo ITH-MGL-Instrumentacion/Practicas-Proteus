@@ -5,13 +5,13 @@ import time
 # ---------------------------------------------------------------------------
 # Configuración
 # ---------------------------------------------------------------------------
-PUERTO_COM     = 'COM2'               # Puerto del COMPIM de Proteus o Arduino físico
+PUERTO_COM     = 'COM3'               # Puerto del COMPIM de Proteus o Arduino físico
 BAUDIOS        = 9600
 ARCHIVO_SALIDA = 'datos_hielera.csv'
 TIMEOUT_SILENCIO_S = 30              # Segundos sin datos antes de cerrar solo
 
 # ---------------------------------------------------------------------------
-# Conexión
+# Conexión y Adquisición
 # ---------------------------------------------------------------------------
 print(f"Conectando al puerto {PUERTO_COM}...")
 try:
@@ -22,14 +22,15 @@ try:
 
     with open(ARCHIVO_SALIDA, mode='w', newline='') as archivo_csv:
         escritor = csv.writer(archivo_csv)
-        # Encabezado fijo en el CSV
-        escritor.writerow(['Tiempo_s', 'Temperatura_C', 'Entrada_PWM'])
+        
+        # Encabezado actualizado con las 4 columnas de variables instrumentales
+        escritor.writerow(['Tiempo_s', 'Temperatura_C', 'Humedad_%', 'Estado_Foco'])
         archivo_csv.flush()
 
         ultimo_dato = time.time()
 
         while True:
-            # Timeout de silencio
+            # Timeout de silencio en caso de desconexión
             if time.time() - ultimo_dato > TIMEOUT_SILENCIO_S:
                 print(f"\nSin datos durante {TIMEOUT_SILENCIO_S} s. Cerrando.")
                 break
@@ -44,28 +45,29 @@ try:
 
             ultimo_dato = time.time()
 
-            # Detectar mensaje de fin enviado por el Arduino
+            # Detectar mensaje de fin enviado por el algoritmo del Arduino
             if linea.startswith('FIN,'):
                 motivo = linea[4:]
                 print(f"\nArduino reportó fin del experimento: {motivo}")
                 break
 
-            # Ignorar la línea de cabecera si el Arduino la reenvía
+            # Ignorar la línea de cabecera si el Arduino la reenvía al reiniciar
             if linea.startswith('Tiempo'):
                 continue
 
             datos = linea.split(',')
-            if len(datos) == 3:
+            # Validación de integridad: asegurar las 4 lecturas instrumentales
+            if len(datos) == 4:
                 escritor.writerow(datos)
                 archivo_csv.flush()
-                print(f"t={datos[0]:>8} s | T={datos[1]:>6} °C | PWM={datos[2]}")
+                print(f"t={datos[0]:>8} s | T={datos[1]:>6} °C | H={datos[2]:>5} % | Foco={datos[3]}")
 
 except KeyboardInterrupt:
-    print("\nCaptura detenida por el usuario.")
+    print("\nCaptura de datos detenida manualmente por el usuario.")
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"Error en la comunicación serial: {e}")
 finally:
     if 'ser' in locals() and ser.is_open:
         ser.close()
-        print("Puerto serie cerrado.")
-    print(f"Datos guardados en '{ARCHIVO_SALIDA}'.")
+        print("Puerto serie cerrado correctamente.")
+    print(f"Datos del experimento consolidados en '{ARCHIVO_SALIDA}'.")
